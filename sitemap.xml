@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wander-m.github.io/link/index.html</loc>
+    
+    <lastmod>2020-11-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wander-m.github.io/tags/index.html</loc>
+    
+    <lastmod>2020-11-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wander-m.github.io/about/index.html</loc>
     
     <lastmod>2020-11-28</lastmod>
@@ -37,13 +51,6 @@
   </url>
   
   <url>
-    <loc>https://wander-m.github.io/tags/index.html</loc>
-    
-    <lastmod>2020-10-28</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wander-m.github.io/2020/10/22/%E5%81%8F%E5%BA%8F%E5%85%B3%E7%B3%BB/</loc>
     
     <lastmod>2020-10-27</lastmod>
@@ -66,13 +73,6 @@
   
   <url>
     <loc>https://wander-m.github.io/2020/10/17/Java%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</loc>
-    
-    <lastmod>2020-10-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wander-m.github.io/link/index.html</loc>
     
     <lastmod>2020-10-24</lastmod>
     
