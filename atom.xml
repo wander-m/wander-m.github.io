@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>charles&#39; blog</title>
+  <title>Charles&#39; blog</title>
   
   <subtitle>My programming learning process</subtitle>
   <link href="https://wander-m.github.io/atom.xml" rel="self"/>
@@ -150,8 +150,8 @@
   
   <entry>
     <title>Java语言程序设计</title>
-    <link href="https://wander-m.github.io/2020/10/17/Java%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
-    <id>https://wander-m.github.io/2020/10/17/Java%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</id>
+    <link href="https://wander-m.github.io/2020/10/17/Java%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1.mm/"/>
+    <id>https://wander-m.github.io/2020/10/17/Java%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1.mm/</id>
     <published>2020-10-17T06:17:50.000Z</published>
     <updated>2020-10-24T09:21:45.268Z</updated>
     
