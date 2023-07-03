@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wander-m.github.io/link/index.html</loc>
+    
+    <lastmod>2023-07-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wander-m.github.io/2023/01/08/%E5%9F%BA%E6%9C%ACDOS%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2023-01-08</lastmod>
@@ -54,13 +61,6 @@
     <loc>https://wander-m.github.io/tags/index.html</loc>
     
     <lastmod>2020-11-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wander-m.github.io/link/index.html</loc>
-    
-    <lastmod>2020-11-28</lastmod>
     
   </url>
   
