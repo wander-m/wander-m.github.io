@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Windows常用快捷键</title>
-    <url>/post/e79721a0.html</url>
+    <url>/e79721a0.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Ctrl+C：复制<br />
 Ctrl+V：粘贴<br />
 Ctrl+A：全选<br />
@@ -17,7 +17,7 @@ Alt+F4：关闭</p>
   </entry>
   <entry>
     <title>MySQL基础</title>
-    <url>/post/bce68613.html</url>
+    <url>/bce68613.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="mysql常见命令"><a class="markdownIt-Anchor" href="#mysql常见命令"></a> MySQL常见命令</h1>
 <h2 id="mysql服务的启动和停止"><a class="markdownIt-Anchor" href="#mysql服务的启动和停止"></a> MySQL服务的启动和停止</h2>
 <ul>
@@ -628,7 +628,7 @@ INNODB存储引擎下，COUNT(</em>)和COUNT(1)的效率差不多，比COUNT(字
   </entry>
   <entry>
     <title>基本DOS命令</title>
-    <url>/post/5d5de5de.html</url>
+    <url>/5d5de5de.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="开始dos控制台的方式"><a class="markdownIt-Anchor" href="#开始dos控制台的方式"></a> 开始DOS控制台的方式</h2>
 <ol>
 <li>开始-Windows系统-命令提示符</li>
@@ -642,12 +642,12 @@ INNODB存储引擎下，COUNT(</em>)和COUNT(1)的效率差不多，比COUNT(字
   </entry>
   <entry>
     <title>快排的实现</title>
-    <url>/post/afe35157.html</url>
+    <url>/afe35157.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
     <title>概率论公式</title>
-    <url>/post/8a707098.html</url>
+    <url>/8a707098.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="常用概率分布及其数学期望和方差"><a class="markdownIt-Anchor" href="#常用概率分布及其数学期望和方差"></a> 常用概率分布及其数学期望和方差</h3>
 <h4 id="常用离散分布"><a class="markdownIt-Anchor" href="#常用离散分布"></a> 常用离散分布</h4>
 <table>
@@ -784,7 +784,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
   </entry>
   <entry>
     <title>腾讯云人工智能从业者认证</title>
-    <url>/post/9eee379c.html</url>
+    <url>/9eee379c.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="人工智能导论"><a class="markdownIt-Anchor" href="#人工智能导论"></a> 人工智能导论</h2>
 <h3 id="人工智能概述"><a class="markdownIt-Anchor" href="#人工智能概述"></a> 人工智能概述</h3>
 <h4 id="人工智能的概念"><a class="markdownIt-Anchor" href="#人工智能的概念"></a> 人工智能的概念</h4>
@@ -874,7 +874,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
   </entry>
   <entry>
     <title>树莓派内网穿透实现远程访问</title>
-    <url>/post/92270b23.html</url>
+    <url>/92270b23.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h3>
 <p>最近入手了一块raspberry 3b+，想要随时随地访问树莓派需要配置内网穿透。我最初找了一些这方便的文章，根据步骤配置，效果不怎么样。然后用了花生壳，体验也不好。后来发现一款强大的免费内网穿透软件，比起付费软件毫不逊色。</p>
 <h3 id="配置方案"><a class="markdownIt-Anchor" href="#配置方案"></a> 配置方案</h3>
@@ -1005,7 +1005,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
   </entry>
   <entry>
     <title>腾讯云从业者认证课程笔记</title>
-    <url>/post/958ae9f3.html</url>
+    <url>/958ae9f3.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="云计算基础"><a class="markdownIt-Anchor" href="#云计算基础"></a> 云计算基础</h2>
 <h3 id="数据中心的发展阶段"><a class="markdownIt-Anchor" href="#数据中心的发展阶段"></a> 数据中心的发展阶段</h3>
 <h4 id="企业自建edc"><a class="markdownIt-Anchor" href="#企业自建edc"></a> 企业自建EDC</h4>
