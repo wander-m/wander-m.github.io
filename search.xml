@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Windows常用快捷键</title>
+    <url>/e79721a0.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Ctrl+C：复制<br />
+Ctrl+V：粘贴<br />
+Ctrl+A：全选<br />
+Ctrl+X：剪切<br />
+Ctrl+Z：撤销<br />
+Ctrl+S：保存<br />
+Alt+F4：关闭</p>
+]]></content>
+      <tags>
+        <tag>小技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL基础</title>
     <url>/bce68613.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="mysql常见命令"><a class="markdownIt-Anchor" href="#mysql常见命令"></a> MySQL常见命令</h1>
@@ -612,21 +627,6 @@ INNODB存储引擎下，COUNT(</em>)和COUNT(1)的效率差不多，比COUNT(字
       </tags>
   </entry>
   <entry>
-    <title>Windows常用快捷键</title>
-    <url>/e79721a0.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Ctrl+C：复制<br />
-Ctrl+V：粘贴<br />
-Ctrl+A：全选<br />
-Ctrl+X：剪切<br />
-Ctrl+Z：撤销<br />
-Ctrl+S：保存<br />
-Alt+F4：关闭</p>
-]]></content>
-      <tags>
-        <tag>小技巧</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基本DOS命令</title>
     <url>/5d5de5de.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="开始dos控制台的方式"><a class="markdownIt-Anchor" href="#开始dos控制台的方式"></a> 开始DOS控制台的方式</h2>
@@ -1002,130 +1002,6 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       <tags>
         <tag>raspberry</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>第一个C语言程序：HelloWorld</title>
-    <url>/%E7%AC%AC%E4%B8%80%E4%B8%AAC%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%EF%BC%9AHelloWorld.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="21-第一个c语言程序helloworld"><a class="markdownIt-Anchor" href="#21-第一个c语言程序helloworld"></a> 2.1 第一个C语言程序：HelloWorld</h1>
-<p>第一个C语言程序</p>
-<p>示例代码如下：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>●C语言的源代码文件是一个普通的文本文件，但扩展名必须是 .c</p>
-<p>代码分析：</p>
-<p>●include头文件包含</p>
-<p>○#include的意思是头文件包含，#include &lt;stdio.h&gt;代表包含stdio.h这个头文件</p>
-<p>○使用C语言库函数需要提前包含库函数对应的头文件，如这里使用了printf()函数，需要包含stdio.h头文件</p>
-<p>●main函数</p>
-<p>○程序的入口，一个程序有且只有一个main函数入口</p>
-<p>○{}叫代码块，一个代码块内部可以有一条或者多条语句</p>
-<p>■所有的可执行语句必须是在代码块里面</p>
-<p>○C语言每句可执行代码都是&quot;;&quot;分号结尾</p>
-<p>■所有的#开头的行，都代表预编译指令，预编译指令行结尾是没有分号的</p>
-<p>●printf函数</p>
-<p>○printf是C语言库函数，功能是向标准输出设备输出一个字符串</p>
-<p>○printf(“hello world\n”);</p>
-<p>■\n的意思是回车换行</p>
-<p>●return语句</p>
-<p>○return代表函数执行完毕，返回return代表函数的终止</p>
-<p>○在main函数中return 0代表程序执行成功</p>
-<p>注释</p>
-<p>●注释</p>
-<p>○对代码的解释和说明</p>
-<p>●特点</p>
-<p>○不会被执行</p>
-<p>●目的</p>
-<p>○让人们能够更加轻松地看懂代码</p>
-<p>●分类</p>
-<p>○行注释 //</p>
-<p>■快键键 ctrl+/</p>
-<p>○块注释 /**/</p>
-<p>■快捷键 shift+alt+a</p>
-<p>示例代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 行注释</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        块注释</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
-    <title>1.2 编程环境</title>
-    <url>/1.2%20%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="12-编程环境"><a class="markdownIt-Anchor" href="#12-编程环境"></a> 1.2 编程环境</h1>
-<p>语言分类介绍</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685576085428-fd531adc-0bb8-453d-9649-aa6df7f35108.png?x-oss-process=image%2Fresize%2Cw_360%2Climit_0" alt="image.png" /></p>
-<p>●编译型语言：C、C++</p>
-<p>●解释型语言：Python、JS</p>
-<p>C语言编译器</p>
-<p>●GCC 系列</p>
-<p>○GNU编译器套装(英语：GNU Compiler Collection，缩写为GCC)，指一套编程语言编译器，常被认为是跨平台编译器的事实标准。原名是：GNU C语言编译器(GNU C Compiler)。</p>
-<p>●MinGW</p>
-<p>○又称mingw32 ， 是将GCC编译器和GNU Binutils移植到Win32平台下的产物。MinGW占用内存、硬盘空间都比较少，能够链接到任意软件，但它对 POSIX 规范的实现没有 Cygwin 库完备。</p>
-<p>●Cygwin</p>
-<p>○Cygwin的主要目的是通过重新编译，将POSIX系统(例如Linux、BSD，以及其他Unix系统)上的软件移植到Windows上 。 Cygwin包括了一套库，该库在Win32系统下实现了POSIX系统调用的API；还有一套GNU开发工具集(比如GCC、GDB)</p>
-<p>●MSVC系列</p>
-<p>○与Visual Studio集成发布，微软自己的编译器，VS是一个基本完整的开发工具集，它包括了整个软件生命周期中所需要的大部分工具，如UML工具、代码管控工具、集成开发环境(IDE)等等。</p>
-<p>gcc编译器安装</p>
-<p>●下载地址：<a href="https://github.com/danielpinto8zz6/c-cpp-compile-run/blob/HEAD/docs/COMPILER_SETUP.md">https://github.com/danielpinto8zz6/c-cpp-compile-run/blob/HEAD/docs/COMPILER_SETUP.md</a></p>
-<p>●安装初始操作</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685794789165-9182293e-3d93-4792-8c72-606efc4c4ff9.png" alt="Snipaste_2023-06-03_14-43-55.png" /></p>
-<p>●指定路径安装</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685794825227-f26cbe7f-92bc-43d3-ab52-eaab916a2dc1.png" alt="Snipaste_2023-06-03_14-45-02.png" /></p>
-<p>●默认配置安装</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685794834314-ecfd9277-9531-4499-ad9c-826a61a78947.png?x-oss-process=image%2Fresize%2Cw_608%2Climit_0" alt="Snipaste_2023-06-03_14-45-59.png" /></p>
-<p>●重启电脑后，打开windows的终端，输入gcc   -v，能查询版本信息，说明gcc安装成功</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685794879613-33e98aaf-b025-4c76-b6a8-3a7b2f488c7b.png" alt="Snipaste_2023-06-03_14-49-12.png" /></p>
-<p>C语言集成开发工具</p>
-<p>●集成开发环境（IDE，Integrated Development Environment ）是用于提供程序开发环境的应用程序，一般包括代码编辑器、编译器、调试器和图形用户界面工具。</p>
-<p>●开发工具种类繁多，有vscode、Dev-C++、code lite、clion、Qt Creator等</p>
-<p>○这里使用的vscode</p>
-<p>vscode安装</p>
-<p>●官网下载地址：<a href="https://code.visualstudio.com/Download">https://code.visualstudio.com/Download</a></p>
-<p>●安装说明，基本上一路下一步即可</p>
-<p>○可以自己选择安装路径</p>
-<p>○可以选择创建桌面快捷方式</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668000407-fc4cfc03-6b4b-4c07-b250-375e11a57310.png" alt="image.png" /></p>
-<p>vscode主题选择</p>
-<p>●第一次启动软件，选择自己喜欢的主题</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668244721-64bb72e0-9dbc-4f17-8b65-cfb13781100e.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
-<p>●设置主题的入口说明</p>
-<p>○打开设置</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668392966-3ca1d94f-322e-4283-9f8c-2292e7a4b921.png" alt="image.png" /></p>
-<p>○输入 theme 后，再在设置页面选择自己喜欢的主题</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668560047-ccf9945d-d665-4e70-b984-2e62b4296192.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
-<p>C语言环境插件下载</p>
-<p>●拓展插件入口</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668640737-0f39912d-4d85-40e3-b20d-4fd6e0ab4d8b.png" alt="image.png" /></p>
-<p>●简体中文语言包</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668752743-07b80aa4-2f1d-4a72-9a78-1cce6708cd97.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668797600-cbe8dd28-21a9-4599-81f3-4ded0aa4020d.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
-<p>●编辑和运行环境</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685669300106-3d4e2e18-3064-4be2-90d6-e46a80e39541.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
-<p>C环境编码设置</p>
-<p>●在windows下如果不指定在程序执行时的GBK字符集，打印中文会乱码</p>
-<p>●设置入口</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1686040430192-46316e7d-2bf7-4de0-b524-e6e4b31390ce.png?x-oss-process=image%2Fresize%2Cw_494%2Climit_0" alt="image.png" /></p>
-<p>●复制参数</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">-fexec-charset=GBK</span><br></pre></td></tr></table></figure>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1686040616379-96f3aaf9-0375-4329-99ee-b0267c0d0381.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
-<p>C代码</p>
-<p>●新建文件夹</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685672485344-f22ac357-3bae-43dd-b9f2-e6155ce10c7a.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685672556490-0ad617a0-a333-47a1-99d6-dadd51eb21ee.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
-<p>●编辑和运行代码</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685672802917-c811444c-4804-4119-9988-326ede9c3ab0.png" alt="image.png" /></p>
-<p>示例代码(直接复制粘贴)：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685673132841-a571d083-fbf9-451f-8291-3913f6f848b7.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
-<p>如果不想弹出通知窗口，可以设置为勿扰模式：</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685673350928-38234b3e-54c8-4b60-9454-71aa2ae3322c.png" alt="image.png" /></p>
-<p>设置用户代码块片段</p>
-<p>●设置入口</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685673835123-23605a3f-0805-4caf-b059-da049ac5b3cc.png" alt="image.png" /></p>
-<p>●选择C</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685673869795-763a1e3e-abf7-42f0-b269-10cf1995caa3.png" alt="image.png" /></p>
-<p>●替换配置文件内容</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">&quot;main function&quot;</span>: &#123;</span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;ma&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">			<span class="string">&quot;#include &lt;stdio.h&gt;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;int main() &#123;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;    $1&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;    return 0;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&#125;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&quot;</span>,</span><br><span class="line">		],</span><br><span class="line">		<span class="attr">&quot;description&quot;</span>: <span class="string">&quot;main function&quot;</span></span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="attr">&quot;printf function&quot;</span>: &#123;</span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;pr&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">			<span class="string">&quot;printf(\&quot;$1\\n\&quot;);&quot;</span>,</span><br><span class="line">		],</span><br><span class="line">		<span class="attr">&quot;description&quot;</span>: <span class="string">&quot;printf function&quot;</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685674385408-a729fc9a-4abc-45c5-b458-18353ad41f22.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
-<p>●验证是否能插入自定义的代码块</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685674561370-d9867c9a-20cb-43b0-a9e7-ba8f7c015ebd.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
-]]></content>
   </entry>
   <entry>
     <title>腾讯云从业者认证课程笔记</title>
@@ -6646,6 +6522,130 @@ ul{text-align:left}
 ]]></content>
   </entry>
   <entry>
+    <title>1.2 编程环境</title>
+    <url>/1.2%20%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="12-编程环境"><a class="markdownIt-Anchor" href="#12-编程环境"></a> 1.2 编程环境</h1>
+<p>语言分类介绍</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685576085428-fd531adc-0bb8-453d-9649-aa6df7f35108.png?x-oss-process=image%2Fresize%2Cw_360%2Climit_0" alt="image.png" /></p>
+<p>●编译型语言：C、C++</p>
+<p>●解释型语言：Python、JS</p>
+<p>C语言编译器</p>
+<p>●GCC 系列</p>
+<p>○GNU编译器套装(英语：GNU Compiler Collection，缩写为GCC)，指一套编程语言编译器，常被认为是跨平台编译器的事实标准。原名是：GNU C语言编译器(GNU C Compiler)。</p>
+<p>●MinGW</p>
+<p>○又称mingw32 ， 是将GCC编译器和GNU Binutils移植到Win32平台下的产物。MinGW占用内存、硬盘空间都比较少，能够链接到任意软件，但它对 POSIX 规范的实现没有 Cygwin 库完备。</p>
+<p>●Cygwin</p>
+<p>○Cygwin的主要目的是通过重新编译，将POSIX系统(例如Linux、BSD，以及其他Unix系统)上的软件移植到Windows上 。 Cygwin包括了一套库，该库在Win32系统下实现了POSIX系统调用的API；还有一套GNU开发工具集(比如GCC、GDB)</p>
+<p>●MSVC系列</p>
+<p>○与Visual Studio集成发布，微软自己的编译器，VS是一个基本完整的开发工具集，它包括了整个软件生命周期中所需要的大部分工具，如UML工具、代码管控工具、集成开发环境(IDE)等等。</p>
+<p>gcc编译器安装</p>
+<p>●下载地址：<a href="https://github.com/danielpinto8zz6/c-cpp-compile-run/blob/HEAD/docs/COMPILER_SETUP.md">https://github.com/danielpinto8zz6/c-cpp-compile-run/blob/HEAD/docs/COMPILER_SETUP.md</a></p>
+<p>●安装初始操作</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685794789165-9182293e-3d93-4792-8c72-606efc4c4ff9.png" alt="Snipaste_2023-06-03_14-43-55.png" /></p>
+<p>●指定路径安装</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685794825227-f26cbe7f-92bc-43d3-ab52-eaab916a2dc1.png" alt="Snipaste_2023-06-03_14-45-02.png" /></p>
+<p>●默认配置安装</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685794834314-ecfd9277-9531-4499-ad9c-826a61a78947.png?x-oss-process=image%2Fresize%2Cw_608%2Climit_0" alt="Snipaste_2023-06-03_14-45-59.png" /></p>
+<p>●重启电脑后，打开windows的终端，输入gcc   -v，能查询版本信息，说明gcc安装成功</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685794879613-33e98aaf-b025-4c76-b6a8-3a7b2f488c7b.png" alt="Snipaste_2023-06-03_14-49-12.png" /></p>
+<p>C语言集成开发工具</p>
+<p>●集成开发环境（IDE，Integrated Development Environment ）是用于提供程序开发环境的应用程序，一般包括代码编辑器、编译器、调试器和图形用户界面工具。</p>
+<p>●开发工具种类繁多，有vscode、Dev-C++、code lite、clion、Qt Creator等</p>
+<p>○这里使用的vscode</p>
+<p>vscode安装</p>
+<p>●官网下载地址：<a href="https://code.visualstudio.com/Download">https://code.visualstudio.com/Download</a></p>
+<p>●安装说明，基本上一路下一步即可</p>
+<p>○可以自己选择安装路径</p>
+<p>○可以选择创建桌面快捷方式</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668000407-fc4cfc03-6b4b-4c07-b250-375e11a57310.png" alt="image.png" /></p>
+<p>vscode主题选择</p>
+<p>●第一次启动软件，选择自己喜欢的主题</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668244721-64bb72e0-9dbc-4f17-8b65-cfb13781100e.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
+<p>●设置主题的入口说明</p>
+<p>○打开设置</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668392966-3ca1d94f-322e-4283-9f8c-2292e7a4b921.png" alt="image.png" /></p>
+<p>○输入 theme 后，再在设置页面选择自己喜欢的主题</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668560047-ccf9945d-d665-4e70-b984-2e62b4296192.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
+<p>C语言环境插件下载</p>
+<p>●拓展插件入口</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668640737-0f39912d-4d85-40e3-b20d-4fd6e0ab4d8b.png" alt="image.png" /></p>
+<p>●简体中文语言包</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668752743-07b80aa4-2f1d-4a72-9a78-1cce6708cd97.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685668797600-cbe8dd28-21a9-4599-81f3-4ded0aa4020d.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
+<p>●编辑和运行环境</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685669300106-3d4e2e18-3064-4be2-90d6-e46a80e39541.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
+<p>C环境编码设置</p>
+<p>●在windows下如果不指定在程序执行时的GBK字符集，打印中文会乱码</p>
+<p>●设置入口</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1686040430192-46316e7d-2bf7-4de0-b524-e6e4b31390ce.png?x-oss-process=image%2Fresize%2Cw_494%2Climit_0" alt="image.png" /></p>
+<p>●复制参数</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">-fexec-charset=GBK</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1686040616379-96f3aaf9-0375-4329-99ee-b0267c0d0381.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
+<p>C代码</p>
+<p>●新建文件夹</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685672485344-f22ac357-3bae-43dd-b9f2-e6155ce10c7a.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685672556490-0ad617a0-a333-47a1-99d6-dadd51eb21ee.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
+<p>●编辑和运行代码</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685672802917-c811444c-4804-4119-9988-326ede9c3ab0.png" alt="image.png" /></p>
+<p>示例代码(直接复制粘贴)：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685673132841-a571d083-fbf9-451f-8291-3913f6f848b7.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
+<p>如果不想弹出通知窗口，可以设置为勿扰模式：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685673350928-38234b3e-54c8-4b60-9454-71aa2ae3322c.png" alt="image.png" /></p>
+<p>设置用户代码块片段</p>
+<p>●设置入口</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685673835123-23605a3f-0805-4caf-b059-da049ac5b3cc.png" alt="image.png" /></p>
+<p>●选择C</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685673869795-763a1e3e-abf7-42f0-b269-10cf1995caa3.png" alt="image.png" /></p>
+<p>●替换配置文件内容</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">&quot;main function&quot;</span>: &#123;</span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;ma&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">			<span class="string">&quot;#include &lt;stdio.h&gt;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;int main() &#123;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;    $1&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;    return 0;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&#125;&quot;</span>,</span><br><span class="line">			<span class="string">&quot;&quot;</span>,</span><br><span class="line">		],</span><br><span class="line">		<span class="attr">&quot;description&quot;</span>: <span class="string">&quot;main function&quot;</span></span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="attr">&quot;printf function&quot;</span>: &#123;</span><br><span class="line">		<span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;pr&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">			<span class="string">&quot;printf(\&quot;$1\\n\&quot;);&quot;</span>,</span><br><span class="line">		],</span><br><span class="line">		<span class="attr">&quot;description&quot;</span>: <span class="string">&quot;printf function&quot;</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685674385408-a729fc9a-4abc-45c5-b458-18353ad41f22.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
+<p>●验证是否能插入自定义的代码块</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685674561370-d9867c9a-20cb-43b0-a9e7-ba8f7c015ebd.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>第一个C语言程序：HelloWorld</title>
+    <url>/%E7%AC%AC%E4%B8%80%E4%B8%AAC%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%EF%BC%9AHelloWorld.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="21-第一个c语言程序helloworld"><a class="markdownIt-Anchor" href="#21-第一个c语言程序helloworld"></a> 2.1 第一个C语言程序：HelloWorld</h1>
+<p>第一个C语言程序</p>
+<p>示例代码如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>●C语言的源代码文件是一个普通的文本文件，但扩展名必须是 .c</p>
+<p>代码分析：</p>
+<p>●include头文件包含</p>
+<p>○#include的意思是头文件包含，#include &lt;stdio.h&gt;代表包含stdio.h这个头文件</p>
+<p>○使用C语言库函数需要提前包含库函数对应的头文件，如这里使用了printf()函数，需要包含stdio.h头文件</p>
+<p>●main函数</p>
+<p>○程序的入口，一个程序有且只有一个main函数入口</p>
+<p>○{}叫代码块，一个代码块内部可以有一条或者多条语句</p>
+<p>■所有的可执行语句必须是在代码块里面</p>
+<p>○C语言每句可执行代码都是&quot;;&quot;分号结尾</p>
+<p>■所有的#开头的行，都代表预编译指令，预编译指令行结尾是没有分号的</p>
+<p>●printf函数</p>
+<p>○printf是C语言库函数，功能是向标准输出设备输出一个字符串</p>
+<p>○printf(“hello world\n”);</p>
+<p>■\n的意思是回车换行</p>
+<p>●return语句</p>
+<p>○return代表函数执行完毕，返回return代表函数的终止</p>
+<p>○在main函数中return 0代表程序执行成功</p>
+<p>注释</p>
+<p>●注释</p>
+<p>○对代码的解释和说明</p>
+<p>●特点</p>
+<p>○不会被执行</p>
+<p>●目的</p>
+<p>○让人们能够更加轻松地看懂代码</p>
+<p>●分类</p>
+<p>○行注释 //</p>
+<p>■快键键 ctrl+/</p>
+<p>○块注释 /**/</p>
+<p>■快捷键 shift+alt+a</p>
+<p>示例代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 行注释</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        块注释</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
     <title>2.2 数据类型</title>
     <url>/2.2%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="22-数据类型"><a class="markdownIt-Anchor" href="#22-数据类型"></a> 2.2 数据类型</h1>
@@ -7143,6 +7143,428 @@ ul{text-align:left}
 <p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685678724983-74e13b6b-bdd8-4fb7-906d-b09605c22a61.png?x-oss-process=image%2Fresize%2Cw_750%2Climit_0" alt="image.png" /></p>
 <p>示例代码：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;float.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;limits.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lf\n&quot;</span>, FLT_MIN);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lf\n&quot;</span>, FLT_MAX);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, CHAR_BIT);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, CHAR_MIN);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, CHAR_MAX);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, SHRT_MIN);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, SHRT_MAX);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, INT_MIN);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, INT_MAX);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>, LONG_MIN);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>, LONG_MAX);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>2.3 数值表示</title>
+    <url>/2.3%20%E6%95%B0%E5%80%BC%E8%A1%A8%E7%A4%BA.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="23-数值表示"><a class="markdownIt-Anchor" href="#23-数值表示"></a> 2.3 数值表示</h1>
+<p>进制</p>
+<p>●进制也就是进位制，是人们规定的一种进位方法</p>
+<p>●对于任何一种进制—X进制，就表示某一位置上的数运算时是逢X进一位</p>
+<p>○十进制是逢十进一，十六进制是逢十六进一，二进制就是逢二进一，以此类推，x进制就是逢x进位</p>
+<table>
+<thead>
+<tr>
+<th>十进制</th>
+<th>二进制</th>
+<th>八进制</th>
+<th>十六进制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>11</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>100</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>101</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>110</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>111</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1000</td>
+<td>10</td>
+<td>8</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1001</td>
+<td>11</td>
+<td>9</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1010</td>
+<td>12</td>
+<td>A</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1011</td>
+<td>13</td>
+<td>B</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1100</td>
+<td>14</td>
+<td>C</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1101</td>
+<td>15</td>
+<td>D</td>
+</tr>
+<tr>
+<td>14</td>
+<td>1110</td>
+<td>16</td>
+<td>E</td>
+</tr>
+<tr>
+<td>15</td>
+<td>1111</td>
+<td>17</td>
+<td>F</td>
+</tr>
+<tr>
+<td>16</td>
+<td>10000</td>
+<td>20</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>二进制</p>
+<p>●二进制是计算技术中广泛采用的一种数制。二进制数据是用0和1两个数码来表示的数</p>
+<p>○它的基数为2，进位规则是“逢二进一”，借位规则是“借一当二”</p>
+<p>●当前的计算机系统使用的基本上是二进制系统，数据在计算机中主要是以补码的形式存储的</p>
+<p>●十进制转化二进制的方法：</p>
+<p>○用十进制数除以2，分别取余数和商数，商数为0的时候，将余数倒着数就是转化后的结果</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685691437159-f2865750-8036-418a-bb70-993af3968209.png" alt="image.png" /></p>
+<p>八进制</p>
+<p>●八进制，Octal，缩写OCT或O，一种以8为基数的计数法，采用0，1，2，3，4，5，6，7八个数字，逢八进1</p>
+<p>○一些编程语言中常常以数字0开始表明该数字是八进制</p>
+<p>●八进制的数和二进制数可以按位对应（八进制一位对应二进制三位），因此常应用在计算机语言中</p>
+<p>●八进制和二进制互转：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685691711372-7aa3dead-e71a-4398-852a-ee52e1b6401d.png" alt="image.png" /></p>
+<p>●十进制转化八进制的方法：</p>
+<p>○用十进制数除以8，分别取余数和商数，商数为0的时候，将余数倒着数就是转化后的结果</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685691930932-7804a968-96b8-48b0-9ebf-256e7cbf4da2.png" alt="image.png" /></p>
+<p>十六进制</p>
+<p>●十六进制（英文名称：Hexadecimal），同我们日常生活中的表示法不一样，它由0-9，A-F组成，字母不区分大小写</p>
+<p>○与10进制的对应关系是：0-9对应0-9，A-F(或a-f)对应10-15</p>
+<p>●十六进制的数和二进制数可以按位对应（十六进制一位对应二进制四位），因此常应用在计算机语言中</p>
+<p>●十六进制和二进制互转：</p>
+<p>二进制转十六进制:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685692193473-8677053e-a8a0-4825-9eaa-b976a9d62950.png" alt="image.png" /></p>
+<p>●十进制转化十六进制的方法：</p>
+<p>○用十进制数除以16，分别取余数和商数，商数为0的时候，将余数倒着数就是转化后的结果</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685692264841-5af6fb80-b372-4134-a968-4bef7a7e54a9.png" alt="image.png" /></p>
+<p>C语言如何表示相应进制数</p>
+<table>
+<thead>
+<tr>
+<th>十进制</th>
+<th>以正常数字1-9开头，如15</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>八进制</td>
+<td>以数字0开头，如017</td>
+</tr>
+<tr>
+<td>十六进制</td>
+<td>以0x或0X开头，如0xf</td>
+</tr>
+<tr>
+<td>二进制</td>
+<td>以0b或0B开头，如0b1111</td>
+</tr>
+</tbody>
+</table>
+<p>示例代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 十进制方式赋值</span></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">15</span>;</span><br><span class="line">    <span class="comment">// 八进制方式赋值</span></span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">017</span>;</span><br><span class="line">    <span class="comment">// 十六进制方式赋值</span></span><br><span class="line">    <span class="keyword">int</span> c = <span class="number">0xf</span>;</span><br><span class="line">    <span class="comment">// 二进制方式赋值</span></span><br><span class="line">    <span class="keyword">int</span> d = <span class="number">0b1111</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d, %d, %d, %d\n&quot;</span>, a, b, c, d);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>数值存储方式</p>
+<p>原码</p>
+<p>●最高位做为符号位，0表示正，为1表示负</p>
+<p>●其它数值部分就是数值本身绝对值的二进制数</p>
+<p>●负数的原码是在其绝对值的基础上，最高位变为1</p>
+<p>●下面数值以1字节的大小描述</p>
+<table>
+<thead>
+<tr>
+<th>十进制数</th>
+<th>原码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+15</td>
+<td>0000 1111</td>
+</tr>
+<tr>
+<td>-15</td>
+<td>1000 1111</td>
+</tr>
+<tr>
+<td>+0</td>
+<td>0000 0000</td>
+</tr>
+<tr>
+<td>-0</td>
+<td>1000 0000</td>
+</tr>
+</tbody>
+</table>
+<p>○原码存在减法运算问题及两个0问题</p>
+<p>反码</p>
+<p>●对于正数，反码与原码相同</p>
+<p>●对于负数，符号位不变，其它部分取反(1变0,0变1)</p>
+<p>●下面数值以1字节的大小描述</p>
+<table>
+<thead>
+<tr>
+<th>十进制数</th>
+<th>反码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+15</td>
+<td>0000 1111</td>
+</tr>
+<tr>
+<td>-15</td>
+<td>1111 0000</td>
+</tr>
+<tr>
+<td>+0</td>
+<td>0000 0000</td>
+</tr>
+<tr>
+<td>-0</td>
+<td>1111 1111</td>
+</tr>
+</tbody>
+</table>
+<p>○反码运算也不方便，通常用来作为求补码的中间过渡。</p>
+<p>补码</p>
+<p>●在计算机系统中，数值一律用补码来存储</p>
+<p>●对于正数，原码、反码、补码相同</p>
+<p>●对于负数，其补码为它的反码加1</p>
+<p>○负数的补码符号位不动，其他位求反，最后整个数加1，得到原码</p>
+<p>●下面数值以1字节的大小描述</p>
+<table>
+<thead>
+<tr>
+<th>十进制数</th>
+<th>补码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+15</td>
+<td>0000 1111</td>
+</tr>
+<tr>
+<td>-15</td>
+<td>1111 0001</td>
+</tr>
+<tr>
+<td>+0</td>
+<td>0000 0000</td>
+</tr>
+<tr>
+<td>-0</td>
+<td>0000 0000</td>
+</tr>
+</tbody>
+</table>
+<p>移码</p>
+<p>●补码符号位取反就是移码，主要用来比较数的大小</p>
+<p>●下面数值以1字节的大小描述</p>
+<table>
+<thead>
+<tr>
+<th>十进制数</th>
+<th>补码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+15</td>
+<td>1000 1111</td>
+</tr>
+<tr>
+<td>-15</td>
+<td>0111 0001</td>
+</tr>
+<tr>
+<td>+0</td>
+<td>1000 0000</td>
+</tr>
+<tr>
+<td>-0</td>
+<td>1000 0000</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+  </entry>
+  <entry>
+    <title>2.4 输出和输入</title>
+    <url>/2.4%20%E8%BE%93%E5%87%BA%E5%92%8C%E8%BE%93%E5%85%A5.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="24-输出和输入"><a class="markdownIt-Anchor" href="#24-输出和输入"></a> 2.4 输出和输入</h1>
+<p>输出</p>
+<p>●输出：将程序的运行结果输出到控制台或终端窗口中</p>
+<p>●printf语法格式</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">printf</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *format, ...)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>○format参数是一个格式化字符串，包含了输出的格式控制信息</p>
+<p>○后面的参数是要输出的数据</p>
+<p>●格式化占位符</p>
+<table>
+<thead>
+<tr>
+<th>打印格式</th>
+<th>对应数据类型</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%d</td>
+<td>int</td>
+<td>接受整数值并将它表示为有符号的十进制整数</td>
+</tr>
+<tr>
+<td>%ld</td>
+<td>long</td>
+<td>接受长整数值并将它表示为有符号的十进制整数</td>
+</tr>
+<tr>
+<td>%hd</td>
+<td>short int</td>
+<td>短整数</td>
+</tr>
+<tr>
+<td>%hu</td>
+<td>unsigned short</td>
+<td>无符号短整数</td>
+</tr>
+<tr>
+<td>%o</td>
+<td>unsigned int</td>
+<td>无符号8进制整数</td>
+</tr>
+<tr>
+<td>%u</td>
+<td>unsigned int</td>
+<td>无符号10进制整数</td>
+</tr>
+<tr>
+<td>%x,%X</td>
+<td>unsigned int</td>
+<td>无符号16进制整数，x对应的是abcdef，X对应的是ABCDEF</td>
+</tr>
+<tr>
+<td>%f</td>
+<td>float</td>
+<td>单精度浮点数</td>
+</tr>
+<tr>
+<td>%lf</td>
+<td>double</td>
+<td>双精度浮点数</td>
+</tr>
+<tr>
+<td>%e,%E</td>
+<td>double</td>
+<td>科学计数法表示的数，此处&quot;e&quot;的大小写代表在输出时用的&quot;e&quot;的大小写</td>
+</tr>
+<tr>
+<td>%c</td>
+<td>char</td>
+<td>字符型。可以把输入的数字按照ASCII码相应转换为对应的字符</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>char *</td>
+<td>字符串。输出字符串中的字符直至字符串中的空字符（字符串以’\0‘结尾，这个’\0’即空字符）</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>void *</td>
+<td>以16进制形式输出指针</td>
+</tr>
+</tbody>
+</table>
+<p>示例代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 定义变量</span></span><br><span class="line">    <span class="keyword">char</span> c = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">    <span class="keyword">short</span> s = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">long</span> l = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">float</span> f = <span class="number">1.123456789123456789</span>;</span><br><span class="line">    <span class="keyword">double</span> d = <span class="number">1.123456789123456789</span>;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> ui = <span class="number">20</span>;</span><br><span class="line">    <span class="keyword">char</span> *name = <span class="string">&quot;bill&quot;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 格式化输出</span></span><br><span class="line">    <span class="comment">// 整型</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;c=%d\n&quot;</span>, c);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;s=%hd\n&quot;</span>, s);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;i=%d\n&quot;</span>, i);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;l=%ld\n&quot;</span>, l);</span><br><span class="line">    <span class="comment">// 浮点类型</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;f=%.10f\n&quot;</span>, f);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;d=%.20lf\n&quot;</span>, d);</span><br><span class="line">    <span class="comment">// 无符号数据</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;u=%u\n&quot;</span>, ui);</span><br><span class="line">    <span class="comment">// 八进制和十六进制 可以加上前缀# 自动输出八进制和十六进制0或0x</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;o=%#o\n&quot;</span>, <span class="number">120</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;x=%#x\n&quot;</span>, <span class="number">120</span>);</span><br><span class="line">    <span class="comment">// 字符串类型</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;s=%s\n&quot;</span>, name);</span><br><span class="line">    <span class="comment">// 内存地址</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ps=%p\n&quot;</span>, &amp;s);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输入</p>
+<p>●输入：接收用户输入的数据的过程</p>
+<p>●scanf语法格式</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;格式化字符串&quot;</span>, &amp;变量<span class="number">1</span>, &amp;变量<span class="number">2</span>，...);</span><br></pre></td></tr></table></figure>
+<p>○格式化字符串用于指定输入的数据类型及其格式</p>
+<p>○变量1、变量2等是要读入的变量的地址</p>
+<p>示例代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 定义int类型变量age，通过scanf输入内容，然后打印内容</span></span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请输入年龄：&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;age);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;age = %d\n&quot;</span>, age);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>案例</p>
+<p>●从键盘输入一个圆形的半径，输出圆的周长和面积</p>
+<p>●思路步骤</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span>定义常量pi</span><br><span class="line"><span class="number">2.</span>定义半径变量r</span><br><span class="line"><span class="number">3.</span>输入半径</span><br><span class="line"><span class="number">4.</span>求周长和面积, * 为乘以运算符</span><br><span class="line"><span class="number">5.</span>输出周长和面积</span><br></pre></td></tr></table></figure>
+<p>示例代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 1.定义常量pi</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">double</span> pi = <span class="number">3.1415</span>;</span><br><span class="line">    <span class="comment">// 2.定义半径变量r</span></span><br><span class="line">    <span class="keyword">double</span> r;</span><br><span class="line">    <span class="comment">// 3.输入半径</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请输入半径：&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>, &amp;r);</span><br><span class="line">    <span class="comment">// 4.求周长和面积, * 为乘以运算符</span></span><br><span class="line">    <span class="keyword">double</span> len = <span class="number">2</span> * pi * r;</span><br><span class="line">    <span class="keyword">double</span> area = pi * r * r;</span><br><span class="line">    <span class="comment">// 5.输出周长和面积</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;周长len = %lf, 面积area = %lf\n&quot;</span>, len, area);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>2.6 类型转换</title>
+    <url>/2.6%20%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="26-类型转换"><a class="markdownIt-Anchor" href="#26-类型转换"></a> 2.6 类型转换</h1>
+<p>数据有不同的类型，不同类型数据之间进行混合运算时涉及到类型的转换问题。</p>
+<p>●转换的方法有两种：</p>
+<p>○自动转换(隐式转换)：遵循一定的规则，由编译系统自动完成</p>
+<p>○强制类型转换：把表达式的运算结果强制转换成所需的数据类型</p>
+<p>■语法格式： (类型)变量或常量</p>
+<p>●类型转换的原则：</p>
+<p>○占用内存字节数少(值域小)的类型，向占用内存字节数多(值域大)的类型转换，以保证精度不降低。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685870042949-e6638cc6-04bd-4f41-a7ed-9d7c660c538c.png" alt="image.png" /></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 隐式转换（自动转换）：编译器自动转换</span></span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">11</span>;</span><br><span class="line">	<span class="keyword">double</span> b = a; <span class="comment">//将a的值，11，转换为11.0000，再给b赋值 </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;b = %lf\n&quot;</span>, b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a = %d\n&quot;</span>, a);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 强制类型转换，用户转换， (类型)变量或常量</span></span><br><span class="line">	<span class="keyword">int</span> m = <span class="number">3</span>;</span><br><span class="line">	<span class="keyword">int</span> n = <span class="number">2</span>;</span><br><span class="line">	b = (<span class="keyword">double</span>)m/n;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;b = %lf\n&quot;</span>, b);</span><br><span class="line"></span><br><span class="line">	b = (<span class="keyword">double</span>)<span class="number">3</span>/<span class="number">2</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;b = %lf\n&quot;</span>, b);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 类型转换原则：数据类型小的往数据类型大的转</span></span><br><span class="line">	<span class="keyword">int</span> c = <span class="number">100</span>;</span><br><span class="line">	<span class="keyword">char</span> d = (<span class="keyword">char</span>)c; <span class="comment">//没有问题</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;d = %d\n&quot;</span>, d);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 大的往小的转，数据可能会丢失</span></span><br><span class="line">	c = <span class="number">129</span>;</span><br><span class="line">	d = (<span class="keyword">char</span>)c;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;d = %d\n&quot;</span>, d);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 小的往大的转</span></span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> big = (<span class="keyword">int</span>)c;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;big = %lld\n&quot;</span>, big);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">b = <span class="number">11.000000</span></span><br><span class="line">a = <span class="number">11</span></span><br><span class="line">b = <span class="number">1.500000</span></span><br><span class="line">b = <span class="number">1.500000</span></span><br><span class="line">d = <span class="number">100</span></span><br><span class="line">d = <span class="number">-127</span></span><br><span class="line">big = <span class="number">129</span></span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
   <entry>
@@ -7800,428 +8222,6 @@ ul{text-align:left}
 ]]></content>
   </entry>
   <entry>
-    <title>2.3 数值表示</title>
-    <url>/2.3%20%E6%95%B0%E5%80%BC%E8%A1%A8%E7%A4%BA.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="23-数值表示"><a class="markdownIt-Anchor" href="#23-数值表示"></a> 2.3 数值表示</h1>
-<p>进制</p>
-<p>●进制也就是进位制，是人们规定的一种进位方法</p>
-<p>●对于任何一种进制—X进制，就表示某一位置上的数运算时是逢X进一位</p>
-<p>○十进制是逢十进一，十六进制是逢十六进一，二进制就是逢二进一，以此类推，x进制就是逢x进位</p>
-<table>
-<thead>
-<tr>
-<th>十进制</th>
-<th>二进制</th>
-<th>八进制</th>
-<th>十六进制</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>2</td>
-<td>10</td>
-<td>2</td>
-<td>2</td>
-</tr>
-<tr>
-<td>3</td>
-<td>11</td>
-<td>3</td>
-<td>3</td>
-</tr>
-<tr>
-<td>4</td>
-<td>100</td>
-<td>4</td>
-<td>4</td>
-</tr>
-<tr>
-<td>5</td>
-<td>101</td>
-<td>5</td>
-<td>5</td>
-</tr>
-<tr>
-<td>6</td>
-<td>110</td>
-<td>6</td>
-<td>6</td>
-</tr>
-<tr>
-<td>7</td>
-<td>111</td>
-<td>7</td>
-<td>7</td>
-</tr>
-<tr>
-<td>8</td>
-<td>1000</td>
-<td>10</td>
-<td>8</td>
-</tr>
-<tr>
-<td>9</td>
-<td>1001</td>
-<td>11</td>
-<td>9</td>
-</tr>
-<tr>
-<td>10</td>
-<td>1010</td>
-<td>12</td>
-<td>A</td>
-</tr>
-<tr>
-<td>11</td>
-<td>1011</td>
-<td>13</td>
-<td>B</td>
-</tr>
-<tr>
-<td>12</td>
-<td>1100</td>
-<td>14</td>
-<td>C</td>
-</tr>
-<tr>
-<td>13</td>
-<td>1101</td>
-<td>15</td>
-<td>D</td>
-</tr>
-<tr>
-<td>14</td>
-<td>1110</td>
-<td>16</td>
-<td>E</td>
-</tr>
-<tr>
-<td>15</td>
-<td>1111</td>
-<td>17</td>
-<td>F</td>
-</tr>
-<tr>
-<td>16</td>
-<td>10000</td>
-<td>20</td>
-<td>10</td>
-</tr>
-</tbody>
-</table>
-<p>二进制</p>
-<p>●二进制是计算技术中广泛采用的一种数制。二进制数据是用0和1两个数码来表示的数</p>
-<p>○它的基数为2，进位规则是“逢二进一”，借位规则是“借一当二”</p>
-<p>●当前的计算机系统使用的基本上是二进制系统，数据在计算机中主要是以补码的形式存储的</p>
-<p>●十进制转化二进制的方法：</p>
-<p>○用十进制数除以2，分别取余数和商数，商数为0的时候，将余数倒着数就是转化后的结果</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685691437159-f2865750-8036-418a-bb70-993af3968209.png" alt="image.png" /></p>
-<p>八进制</p>
-<p>●八进制，Octal，缩写OCT或O，一种以8为基数的计数法，采用0，1，2，3，4，5，6，7八个数字，逢八进1</p>
-<p>○一些编程语言中常常以数字0开始表明该数字是八进制</p>
-<p>●八进制的数和二进制数可以按位对应（八进制一位对应二进制三位），因此常应用在计算机语言中</p>
-<p>●八进制和二进制互转：</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685691711372-7aa3dead-e71a-4398-852a-ee52e1b6401d.png" alt="image.png" /></p>
-<p>●十进制转化八进制的方法：</p>
-<p>○用十进制数除以8，分别取余数和商数，商数为0的时候，将余数倒着数就是转化后的结果</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685691930932-7804a968-96b8-48b0-9ebf-256e7cbf4da2.png" alt="image.png" /></p>
-<p>十六进制</p>
-<p>●十六进制（英文名称：Hexadecimal），同我们日常生活中的表示法不一样，它由0-9，A-F组成，字母不区分大小写</p>
-<p>○与10进制的对应关系是：0-9对应0-9，A-F(或a-f)对应10-15</p>
-<p>●十六进制的数和二进制数可以按位对应（十六进制一位对应二进制四位），因此常应用在计算机语言中</p>
-<p>●十六进制和二进制互转：</p>
-<p>二进制转十六进制:</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685692193473-8677053e-a8a0-4825-9eaa-b976a9d62950.png" alt="image.png" /></p>
-<p>●十进制转化十六进制的方法：</p>
-<p>○用十进制数除以16，分别取余数和商数，商数为0的时候，将余数倒着数就是转化后的结果</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685692264841-5af6fb80-b372-4134-a968-4bef7a7e54a9.png" alt="image.png" /></p>
-<p>C语言如何表示相应进制数</p>
-<table>
-<thead>
-<tr>
-<th>十进制</th>
-<th>以正常数字1-9开头，如15</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>八进制</td>
-<td>以数字0开头，如017</td>
-</tr>
-<tr>
-<td>十六进制</td>
-<td>以0x或0X开头，如0xf</td>
-</tr>
-<tr>
-<td>二进制</td>
-<td>以0b或0B开头，如0b1111</td>
-</tr>
-</tbody>
-</table>
-<p>示例代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 十进制方式赋值</span></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">15</span>;</span><br><span class="line">    <span class="comment">// 八进制方式赋值</span></span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">017</span>;</span><br><span class="line">    <span class="comment">// 十六进制方式赋值</span></span><br><span class="line">    <span class="keyword">int</span> c = <span class="number">0xf</span>;</span><br><span class="line">    <span class="comment">// 二进制方式赋值</span></span><br><span class="line">    <span class="keyword">int</span> d = <span class="number">0b1111</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d, %d, %d, %d\n&quot;</span>, a, b, c, d);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>数值存储方式</p>
-<p>原码</p>
-<p>●最高位做为符号位，0表示正，为1表示负</p>
-<p>●其它数值部分就是数值本身绝对值的二进制数</p>
-<p>●负数的原码是在其绝对值的基础上，最高位变为1</p>
-<p>●下面数值以1字节的大小描述</p>
-<table>
-<thead>
-<tr>
-<th>十进制数</th>
-<th>原码</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>+15</td>
-<td>0000 1111</td>
-</tr>
-<tr>
-<td>-15</td>
-<td>1000 1111</td>
-</tr>
-<tr>
-<td>+0</td>
-<td>0000 0000</td>
-</tr>
-<tr>
-<td>-0</td>
-<td>1000 0000</td>
-</tr>
-</tbody>
-</table>
-<p>○原码存在减法运算问题及两个0问题</p>
-<p>反码</p>
-<p>●对于正数，反码与原码相同</p>
-<p>●对于负数，符号位不变，其它部分取反(1变0,0变1)</p>
-<p>●下面数值以1字节的大小描述</p>
-<table>
-<thead>
-<tr>
-<th>十进制数</th>
-<th>反码</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>+15</td>
-<td>0000 1111</td>
-</tr>
-<tr>
-<td>-15</td>
-<td>1111 0000</td>
-</tr>
-<tr>
-<td>+0</td>
-<td>0000 0000</td>
-</tr>
-<tr>
-<td>-0</td>
-<td>1111 1111</td>
-</tr>
-</tbody>
-</table>
-<p>○反码运算也不方便，通常用来作为求补码的中间过渡。</p>
-<p>补码</p>
-<p>●在计算机系统中，数值一律用补码来存储</p>
-<p>●对于正数，原码、反码、补码相同</p>
-<p>●对于负数，其补码为它的反码加1</p>
-<p>○负数的补码符号位不动，其他位求反，最后整个数加1，得到原码</p>
-<p>●下面数值以1字节的大小描述</p>
-<table>
-<thead>
-<tr>
-<th>十进制数</th>
-<th>补码</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>+15</td>
-<td>0000 1111</td>
-</tr>
-<tr>
-<td>-15</td>
-<td>1111 0001</td>
-</tr>
-<tr>
-<td>+0</td>
-<td>0000 0000</td>
-</tr>
-<tr>
-<td>-0</td>
-<td>0000 0000</td>
-</tr>
-</tbody>
-</table>
-<p>移码</p>
-<p>●补码符号位取反就是移码，主要用来比较数的大小</p>
-<p>●下面数值以1字节的大小描述</p>
-<table>
-<thead>
-<tr>
-<th>十进制数</th>
-<th>补码</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>+15</td>
-<td>1000 1111</td>
-</tr>
-<tr>
-<td>-15</td>
-<td>0111 0001</td>
-</tr>
-<tr>
-<td>+0</td>
-<td>1000 0000</td>
-</tr>
-<tr>
-<td>-0</td>
-<td>1000 0000</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-  </entry>
-  <entry>
-    <title>2.4 输出和输入</title>
-    <url>/2.4%20%E8%BE%93%E5%87%BA%E5%92%8C%E8%BE%93%E5%85%A5.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="24-输出和输入"><a class="markdownIt-Anchor" href="#24-输出和输入"></a> 2.4 输出和输入</h1>
-<p>输出</p>
-<p>●输出：将程序的运行结果输出到控制台或终端窗口中</p>
-<p>●printf语法格式</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">printf</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *format, ...)</span></span>;</span><br></pre></td></tr></table></figure>
-<p>○format参数是一个格式化字符串，包含了输出的格式控制信息</p>
-<p>○后面的参数是要输出的数据</p>
-<p>●格式化占位符</p>
-<table>
-<thead>
-<tr>
-<th>打印格式</th>
-<th>对应数据类型</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>%d</td>
-<td>int</td>
-<td>接受整数值并将它表示为有符号的十进制整数</td>
-</tr>
-<tr>
-<td>%ld</td>
-<td>long</td>
-<td>接受长整数值并将它表示为有符号的十进制整数</td>
-</tr>
-<tr>
-<td>%hd</td>
-<td>short int</td>
-<td>短整数</td>
-</tr>
-<tr>
-<td>%hu</td>
-<td>unsigned short</td>
-<td>无符号短整数</td>
-</tr>
-<tr>
-<td>%o</td>
-<td>unsigned int</td>
-<td>无符号8进制整数</td>
-</tr>
-<tr>
-<td>%u</td>
-<td>unsigned int</td>
-<td>无符号10进制整数</td>
-</tr>
-<tr>
-<td>%x,%X</td>
-<td>unsigned int</td>
-<td>无符号16进制整数，x对应的是abcdef，X对应的是ABCDEF</td>
-</tr>
-<tr>
-<td>%f</td>
-<td>float</td>
-<td>单精度浮点数</td>
-</tr>
-<tr>
-<td>%lf</td>
-<td>double</td>
-<td>双精度浮点数</td>
-</tr>
-<tr>
-<td>%e,%E</td>
-<td>double</td>
-<td>科学计数法表示的数，此处&quot;e&quot;的大小写代表在输出时用的&quot;e&quot;的大小写</td>
-</tr>
-<tr>
-<td>%c</td>
-<td>char</td>
-<td>字符型。可以把输入的数字按照ASCII码相应转换为对应的字符</td>
-</tr>
-<tr>
-<td>%s</td>
-<td>char *</td>
-<td>字符串。输出字符串中的字符直至字符串中的空字符（字符串以’\0‘结尾，这个’\0’即空字符）</td>
-</tr>
-<tr>
-<td>%p</td>
-<td>void *</td>
-<td>以16进制形式输出指针</td>
-</tr>
-</tbody>
-</table>
-<p>示例代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 定义变量</span></span><br><span class="line">    <span class="keyword">char</span> c = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">    <span class="keyword">short</span> s = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">long</span> l = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">float</span> f = <span class="number">1.123456789123456789</span>;</span><br><span class="line">    <span class="keyword">double</span> d = <span class="number">1.123456789123456789</span>;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> ui = <span class="number">20</span>;</span><br><span class="line">    <span class="keyword">char</span> *name = <span class="string">&quot;bill&quot;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 格式化输出</span></span><br><span class="line">    <span class="comment">// 整型</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;c=%d\n&quot;</span>, c);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;s=%hd\n&quot;</span>, s);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;i=%d\n&quot;</span>, i);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;l=%ld\n&quot;</span>, l);</span><br><span class="line">    <span class="comment">// 浮点类型</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;f=%.10f\n&quot;</span>, f);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;d=%.20lf\n&quot;</span>, d);</span><br><span class="line">    <span class="comment">// 无符号数据</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;u=%u\n&quot;</span>, ui);</span><br><span class="line">    <span class="comment">// 八进制和十六进制 可以加上前缀# 自动输出八进制和十六进制0或0x</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;o=%#o\n&quot;</span>, <span class="number">120</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;x=%#x\n&quot;</span>, <span class="number">120</span>);</span><br><span class="line">    <span class="comment">// 字符串类型</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;s=%s\n&quot;</span>, name);</span><br><span class="line">    <span class="comment">// 内存地址</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ps=%p\n&quot;</span>, &amp;s);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输入</p>
-<p>●输入：接收用户输入的数据的过程</p>
-<p>●scanf语法格式</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;格式化字符串&quot;</span>, &amp;变量<span class="number">1</span>, &amp;变量<span class="number">2</span>，...);</span><br></pre></td></tr></table></figure>
-<p>○格式化字符串用于指定输入的数据类型及其格式</p>
-<p>○变量1、变量2等是要读入的变量的地址</p>
-<p>示例代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 定义int类型变量age，通过scanf输入内容，然后打印内容</span></span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请输入年龄：&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;age);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;age = %d\n&quot;</span>, age);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>案例</p>
-<p>●从键盘输入一个圆形的半径，输出圆的周长和面积</p>
-<p>●思路步骤</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span>定义常量pi</span><br><span class="line"><span class="number">2.</span>定义半径变量r</span><br><span class="line"><span class="number">3.</span>输入半径</span><br><span class="line"><span class="number">4.</span>求周长和面积, * 为乘以运算符</span><br><span class="line"><span class="number">5.</span>输出周长和面积</span><br></pre></td></tr></table></figure>
-<p>示例代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 1.定义常量pi</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">double</span> pi = <span class="number">3.1415</span>;</span><br><span class="line">    <span class="comment">// 2.定义半径变量r</span></span><br><span class="line">    <span class="keyword">double</span> r;</span><br><span class="line">    <span class="comment">// 3.输入半径</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请输入半径：&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>, &amp;r);</span><br><span class="line">    <span class="comment">// 4.求周长和面积, * 为乘以运算符</span></span><br><span class="line">    <span class="keyword">double</span> len = <span class="number">2</span> * pi * r;</span><br><span class="line">    <span class="keyword">double</span> area = pi * r * r;</span><br><span class="line">    <span class="comment">// 5.输出周长和面积</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;周长len = %lf, 面积area = %lf\n&quot;</span>, len, area);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
-    <title>2.6 类型转换</title>
-    <url>/2.6%20%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="26-类型转换"><a class="markdownIt-Anchor" href="#26-类型转换"></a> 2.6 类型转换</h1>
-<p>数据有不同的类型，不同类型数据之间进行混合运算时涉及到类型的转换问题。</p>
-<p>●转换的方法有两种：</p>
-<p>○自动转换(隐式转换)：遵循一定的规则，由编译系统自动完成</p>
-<p>○强制类型转换：把表达式的运算结果强制转换成所需的数据类型</p>
-<p>■语法格式： (类型)变量或常量</p>
-<p>●类型转换的原则：</p>
-<p>○占用内存字节数少(值域小)的类型，向占用内存字节数多(值域大)的类型转换，以保证精度不降低。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685870042949-e6638cc6-04bd-4f41-a7ed-9d7c660c538c.png" alt="image.png" /></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">// 隐式转换（自动转换）：编译器自动转换</span></span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">11</span>;</span><br><span class="line">	<span class="keyword">double</span> b = a; <span class="comment">//将a的值，11，转换为11.0000，再给b赋值 </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;b = %lf\n&quot;</span>, b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a = %d\n&quot;</span>, a);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 强制类型转换，用户转换， (类型)变量或常量</span></span><br><span class="line">	<span class="keyword">int</span> m = <span class="number">3</span>;</span><br><span class="line">	<span class="keyword">int</span> n = <span class="number">2</span>;</span><br><span class="line">	b = (<span class="keyword">double</span>)m/n;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;b = %lf\n&quot;</span>, b);</span><br><span class="line"></span><br><span class="line">	b = (<span class="keyword">double</span>)<span class="number">3</span>/<span class="number">2</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;b = %lf\n&quot;</span>, b);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 类型转换原则：数据类型小的往数据类型大的转</span></span><br><span class="line">	<span class="keyword">int</span> c = <span class="number">100</span>;</span><br><span class="line">	<span class="keyword">char</span> d = (<span class="keyword">char</span>)c; <span class="comment">//没有问题</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;d = %d\n&quot;</span>, d);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 大的往小的转，数据可能会丢失</span></span><br><span class="line">	c = <span class="number">129</span>;</span><br><span class="line">	d = (<span class="keyword">char</span>)c;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;d = %d\n&quot;</span>, d);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 小的往大的转</span></span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> big = (<span class="keyword">int</span>)c;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;big = %lld\n&quot;</span>, big);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">b = <span class="number">11.000000</span></span><br><span class="line">a = <span class="number">11</span></span><br><span class="line">b = <span class="number">1.500000</span></span><br><span class="line">b = <span class="number">1.500000</span></span><br><span class="line">d = <span class="number">100</span></span><br><span class="line">d = <span class="number">-127</span></span><br><span class="line">big = <span class="number">129</span></span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
     <title>3.1 程序执行的三大流程</title>
     <url>/3.1%20%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E7%9A%84%E4%B8%89%E5%A4%A7%E6%B5%81%E7%A8%8B.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="31-程序执行的三大流程"><a class="markdownIt-Anchor" href="#31-程序执行的三大流程"></a> 3.1 程序执行的三大流程</h1>
@@ -8229,58 +8229,6 @@ ul{text-align:left}
 <p>●分支 : 根据条件判断， 决定执行代码的分支</p>
 <p>●循环 : 让特定代码重复的执行</p>
 <p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1685972881760-b121507b-6608-4e7a-9dab-f92fe87d5ac4.png?x-oss-process=image%2Fresize%2Cw_711%2Climit_0" alt="image.png" /></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>3.3 循环语句</title>
-    <url>/3.3%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="33-循环语句"><a class="markdownIt-Anchor" href="#33-循环语句"></a> 3.3 循环语句</h1>
-<p>●什么是循环</p>
-<p>○重复执行代码</p>
-<p>●为什么需要循环</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1686029149023-8f736032-e2d8-41c5-b532-dabf5d614566.png" alt="image.png" /></p>
-<p>●循环的实现方式</p>
-<p>○while</p>
-<p>○do…while</p>
-<p>○for</p>
-<p>while语句</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1686029371068-03013a1a-354a-4fd3-b360-dde6ecba0614.png?x-oss-process=image%2Fresize%2Cw_237%2Climit_0" alt="图片1.png" /></p>
-<p>语法格式：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (条件) &#123;</span><br><span class="line">    循环体</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>需求：跑步5圈</p>
-<p>示例代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 需求跑步5圈</span></span><br><span class="line">    <span class="comment">// 1. 条件变量的定义</span></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// 2. while 控制重复的次数</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= <span class="number">5</span>) &#123;</span><br><span class="line">        <span class="comment">// 3. 打印跑步第几圈</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;跑步第 %d 圈\n&quot;</span>, i);</span><br><span class="line">        <span class="comment">// 4. 条件改变</span></span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>do…while语句</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1686048185567-b355d7e2-6c2a-4d93-a615-3d7416876a30.png?x-oss-process=image%2Fresize%2Cw_254%2Climit_0" alt="图片1.png" /></p>
-<p>语法格式：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    循环体</span><br><span class="line">    ……</span><br><span class="line">&#125; <span class="keyword">while</span> (条件);</span><br></pre></td></tr></table></figure>
-<p>●do-while 循环语句是在执行循环体之后才检查 条件 表达式的值</p>
-<p>●所以 do-while 语句的循环体至少执行一次，do…while也被称为直到型循环</p>
-<p>需求：跑步5圈</p>
-<p>示例代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 需求跑步5圈</span></span><br><span class="line">    <span class="comment">// 1. 条件变量的定义</span></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// 2.1 打印跑步第几圈</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;跑步第 %d 圈\n&quot;</span>, i);</span><br><span class="line">        <span class="comment">// 2.2 条件改变</span></span><br><span class="line">        i++;</span><br><span class="line">    &#125; <span class="keyword">while</span> ( i &lt;= <span class="number">5</span> ); <span class="comment">// 3. 控制重复的次数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>for语句</p>
-<p>语法格式：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ( init; condition; increment ) &#123;</span><br><span class="line">	循环体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>●init会首先被执行，且只会执行一次</p>
-<p>●接下来，会判断 condition，如果条件condition为真</p>
-<p>●在执行完 for 循环主体后，控制流会跳回上面的 increment 语句</p>
-<p>●条件再次被判断</p>
-<p>需求：跑步5圈</p>
-<p>示例代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 需求跑步5圈</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;跑步第 %d 圈\n&quot;</span>, i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>死循环</p>
-<p>●条件永远为真的循环就是死循环</p>
-<p>●示例代码</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// while (1) &#123;</span></span><br><span class="line">    <span class="comment">//     printf(&quot;根本停不下来\n&quot;);</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(;;) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;根本停不下来\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>循环案例</p>
-<p>实现1+2+3……100所有数字的累加</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 需求：实现1+2+3……100所有数字的累加</span></span><br><span class="line">    <span class="comment">// 定义条件变量初始值为1</span></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// 定义累加变量，初始值为0</span></span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 循环控制100次</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= <span class="number">100</span>) &#123;</span><br><span class="line">        <span class="comment">// 累加</span></span><br><span class="line">        sum += i;</span><br><span class="line">        <span class="comment">// 条件改变</span></span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 循环外面，打印最终的累加和</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;sum = %d\n&quot;</span>, sum);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// for循环实现</span></span><br><span class="line">    <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">        temp += i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;temp = %d\n&quot;</span>, temp);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>循环嵌套</p>
-<p>需求如下：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">通过<span class="keyword">for</span>循环嵌套打印内容：</span><br><span class="line">* * * * * </span><br><span class="line">* * * * * </span><br><span class="line">* * * * * </span><br><span class="line">* * * * * </span><br><span class="line">* * * * * </span><br><span class="line">说明：</span><br><span class="line"><span class="number">1</span>）每行有<span class="number">5</span>个*，总共有<span class="number">5</span>行</span><br><span class="line"><span class="number">2</span>）*之间有空格隔开</span><br><span class="line"><span class="number">3</span>）<span class="built_in">printf</span>()<span class="number">1</span>次只能打印<span class="number">1</span>个*</span><br></pre></td></tr></table></figure>
-<p>示例代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">4</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">4</span>; j++) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;* &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
   <entry>
@@ -8380,6 +8328,58 @@ ul{text-align:left}
 ]]></content>
   </entry>
   <entry>
+    <title>3.3 循环语句</title>
+    <url>/3.3%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="33-循环语句"><a class="markdownIt-Anchor" href="#33-循环语句"></a> 3.3 循环语句</h1>
+<p>●什么是循环</p>
+<p>○重复执行代码</p>
+<p>●为什么需要循环</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1686029149023-8f736032-e2d8-41c5-b532-dabf5d614566.png" alt="image.png" /></p>
+<p>●循环的实现方式</p>
+<p>○while</p>
+<p>○do…while</p>
+<p>○for</p>
+<p>while语句</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1686029371068-03013a1a-354a-4fd3-b360-dde6ecba0614.png?x-oss-process=image%2Fresize%2Cw_237%2Climit_0" alt="图片1.png" /></p>
+<p>语法格式：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (条件) &#123;</span><br><span class="line">    循环体</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>需求：跑步5圈</p>
+<p>示例代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 需求跑步5圈</span></span><br><span class="line">    <span class="comment">// 1. 条件变量的定义</span></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// 2. while 控制重复的次数</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= <span class="number">5</span>) &#123;</span><br><span class="line">        <span class="comment">// 3. 打印跑步第几圈</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;跑步第 %d 圈\n&quot;</span>, i);</span><br><span class="line">        <span class="comment">// 4. 条件改变</span></span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>do…while语句</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/29103019/1686048185567-b355d7e2-6c2a-4d93-a615-3d7416876a30.png?x-oss-process=image%2Fresize%2Cw_254%2Climit_0" alt="图片1.png" /></p>
+<p>语法格式：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    循环体</span><br><span class="line">    ……</span><br><span class="line">&#125; <span class="keyword">while</span> (条件);</span><br></pre></td></tr></table></figure>
+<p>●do-while 循环语句是在执行循环体之后才检查 条件 表达式的值</p>
+<p>●所以 do-while 语句的循环体至少执行一次，do…while也被称为直到型循环</p>
+<p>需求：跑步5圈</p>
+<p>示例代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 需求跑步5圈</span></span><br><span class="line">    <span class="comment">// 1. 条件变量的定义</span></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// 2.1 打印跑步第几圈</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;跑步第 %d 圈\n&quot;</span>, i);</span><br><span class="line">        <span class="comment">// 2.2 条件改变</span></span><br><span class="line">        i++;</span><br><span class="line">    &#125; <span class="keyword">while</span> ( i &lt;= <span class="number">5</span> ); <span class="comment">// 3. 控制重复的次数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>for语句</p>
+<p>语法格式：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ( init; condition; increment ) &#123;</span><br><span class="line">	循环体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>●init会首先被执行，且只会执行一次</p>
+<p>●接下来，会判断 condition，如果条件condition为真</p>
+<p>●在执行完 for 循环主体后，控制流会跳回上面的 increment 语句</p>
+<p>●条件再次被判断</p>
+<p>需求：跑步5圈</p>
+<p>示例代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 需求跑步5圈</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;跑步第 %d 圈\n&quot;</span>, i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>死循环</p>
+<p>●条件永远为真的循环就是死循环</p>
+<p>●示例代码</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// while (1) &#123;</span></span><br><span class="line">    <span class="comment">//     printf(&quot;根本停不下来\n&quot;);</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(;;) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;根本停不下来\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>循环案例</p>
+<p>实现1+2+3……100所有数字的累加</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 需求：实现1+2+3……100所有数字的累加</span></span><br><span class="line">    <span class="comment">// 定义条件变量初始值为1</span></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// 定义累加变量，初始值为0</span></span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 循环控制100次</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= <span class="number">100</span>) &#123;</span><br><span class="line">        <span class="comment">// 累加</span></span><br><span class="line">        sum += i;</span><br><span class="line">        <span class="comment">// 条件改变</span></span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 循环外面，打印最终的累加和</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;sum = %d\n&quot;</span>, sum);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// for循环实现</span></span><br><span class="line">    <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">100</span>; i++) &#123;</span><br><span class="line">        temp += i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;temp = %d\n&quot;</span>, temp);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>循环嵌套</p>
+<p>需求如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">通过<span class="keyword">for</span>循环嵌套打印内容：</span><br><span class="line">* * * * * </span><br><span class="line">* * * * * </span><br><span class="line">* * * * * </span><br><span class="line">* * * * * </span><br><span class="line">* * * * * </span><br><span class="line">说明：</span><br><span class="line"><span class="number">1</span>）每行有<span class="number">5</span>个*，总共有<span class="number">5</span>行</span><br><span class="line"><span class="number">2</span>）*之间有空格隔开</span><br><span class="line"><span class="number">3</span>）<span class="built_in">printf</span>()<span class="number">1</span>次只能打印<span class="number">1</span>个*</span><br></pre></td></tr></table></figure>
+<p>示例代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">4</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">4</span>; j++) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;* &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
     <title>3.4 跳转关键字</title>
     <url>/3.4%20%E8%B7%B3%E8%BD%AC%E5%85%B3%E9%94%AE%E5%AD%97.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="34-跳转关键字"><a class="markdownIt-Anchor" href="#34-跳转关键字"></a> 3.4 跳转关键字</h1>
@@ -8407,19 +8407,21 @@ ul{text-align:left}
 ]]></content>
   </entry>
   <entry>
-    <title>4.3 局部和全局变量</title>
-    <url>/4.3%20%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="43-局部和全局变量"><a class="markdownIt-Anchor" href="#43-局部和全局变量"></a> 4.3 局部和全局变量</h1>
-<p>局部变量</p>
-<p>●定义在函数内部的变量称为局部变量（Local Variable）</p>
-<p>●局部变量的作用域(作用范围)仅限于函数内部， 离开该函数后是无效的</p>
-<p>○离开该函数后，局部变量自动释放</p>
-<p>●示例代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">my_add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// a, b, res是局部变量，只能在my_add内部使用</span></span><br><span class="line">    <span class="keyword">int</span> res = a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 函数调用</span></span><br><span class="line">    my_add(<span class="number">10</span>, <span class="number">20</span>);</span><br><span class="line">    <span class="comment">// 函数外部无法使用函数内的局部变量，下面代码是错误的</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d, %d, %d\n&quot;</span>, a, b, res);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>全局变量</p>
-<p>●在所有函数外部定义的变量称为全局变量（Global Variable），它的作用域默认是整个程序，也就是所有的源文件</p>
-<p>●示例代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数外定义的变量为全局变量，定义完，所有地方都能使用</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 使用全局变量</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;a = %d\n&quot;</span>, a);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>4.1 概述</title>
+    <url>/4.1%20%E6%A6%82%E8%BF%B0.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="41-概述"><a class="markdownIt-Anchor" href="#41-概述"></a> 4.1 概述</h1>
+<p>●函数是一种可重用的代码块，用于执行特定任务或完成特定功能</p>
+<p>●函数作用：对具备相同逻辑的代码进行封装，提高代码的编写效率，实现对代码的重用</p>
+<p>●函数作用演示代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                            _ooOoo_  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                           o8888888o  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                           88  .  88  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                           (| -_- |)  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                            O\\ = /O  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                        ____/`---&#x27;\\____  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                      .   &#x27; \\| |// `.  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                       / \\||| : |||// \\  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                     / _||||| -:- |||||- \\  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                       | | \\\\\\ - /// | |  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                     | \\_| &#x27;&#x27;\\---/&#x27;&#x27; | |  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                      \\ .-\\__ `-` ___/-. /  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                   ___`. .&#x27; /--.--\\ `. . __  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                .&quot;</span><span class="string">&quot; &#x27;&lt; `.___\\_&lt;|&gt;_/___.&#x27; &gt;&#x27;&quot;</span><span class="string">&quot;.  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;               | | : `- \\`.;`\\ _ /`;.`/ - ` : | |  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                 \\ \\ `-. \\_ __\\ /__ _/ .-` / /  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;         ======`-.____`-.___\\_____/___.-`____.-&#x27;======  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                            `=---=&#x27;  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;         .............................................  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  佛祖镇楼                  BUG辟易  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;          佛曰:  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  写字楼里写字间，写字间里程序员；  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  程序人员写程序，又拿程序换酒钱。  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  酒醒只在网上坐，酒醉还来网下眠；  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  酒醉酒醒日复日，网上网下年复年。  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  但愿老死电脑间，不愿鞠躬老板前；  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  奔驰宝马贵者趣，公交自行程序员。  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  别人笑我忒疯癫，我笑自己命太贱；  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  不见满街漂亮妹，哪个归得程序员？\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 函数调用</span></span><br><span class="line">    func();</span><br><span class="line">    func();</span><br><span class="line">    func();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>●函数使用步骤</p>
+<p>○定义函数</p>
+<p>■理解为制作工具，工具只需要制作1次即可</p>
+<p>○调用函数</p>
+<p>■理解为使用工具</p>
+<p>●函数分类</p>
+<p>○系统函数，即库函数：这是由编译系统提供的，用户不必自己定义这些函数，可以直接使用它们，如我们常用的打印函数printf()。</p>
+<p>○自定义函数：用以解决用户的专门需要。</p>
 ]]></content>
   </entry>
   <entry>
@@ -8476,6 +8478,22 @@ ul{text-align:left}
 <p>●需求：自定义一个函数，返回2个整数的最大值</p>
 <p>●示例代码：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">my_max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (a &gt; b) &#123;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 函数调用</span></span><br><span class="line">    <span class="keyword">int</span> res = my_max(<span class="number">100</span>, <span class="number">200</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;res = %d\n&quot;</span>, res);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>4.3 局部和全局变量</title>
+    <url>/4.3%20%E5%B1%80%E9%83%A8%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="43-局部和全局变量"><a class="markdownIt-Anchor" href="#43-局部和全局变量"></a> 4.3 局部和全局变量</h1>
+<p>局部变量</p>
+<p>●定义在函数内部的变量称为局部变量（Local Variable）</p>
+<p>●局部变量的作用域(作用范围)仅限于函数内部， 离开该函数后是无效的</p>
+<p>○离开该函数后，局部变量自动释放</p>
+<p>●示例代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">my_add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// a, b, res是局部变量，只能在my_add内部使用</span></span><br><span class="line">    <span class="keyword">int</span> res = a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 函数调用</span></span><br><span class="line">    my_add(<span class="number">10</span>, <span class="number">20</span>);</span><br><span class="line">    <span class="comment">// 函数外部无法使用函数内的局部变量，下面代码是错误的</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d, %d, %d\n&quot;</span>, a, b, res);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>全局变量</p>
+<p>●在所有函数外部定义的变量称为全局变量（Global Variable），它的作用域默认是整个程序，也就是所有的源文件</p>
+<p>●示例代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数外定义的变量为全局变量，定义完，所有地方都能使用</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 使用全局变量</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;a = %d\n&quot;</span>, a);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
   <entry>
@@ -8596,24 +8614,6 @@ ul{text-align:left}
 <p>●回调函数可以增加函数的通用性</p>
 <p>○在不改变原函数的前提下，增加新功能</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义函数，函数指针做形参</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> (*p)(<span class="keyword">int</span>, <span class="keyword">int</span>))</span></span>&#123;</span><br><span class="line">    <span class="comment">// 通过函数指针变量调用函数，获取返回值</span></span><br><span class="line">    <span class="keyword">int</span> res = p(a, b);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义加法函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义减法函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sub</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x - y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> result;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 回调加法函数</span></span><br><span class="line">    result = calc(<span class="number">1</span>, <span class="number">2</span>, add);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;result = %d\n&quot;</span>, result);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 回调减法函数</span></span><br><span class="line">    result = calc(<span class="number">10</span>, <span class="number">5</span>, sub);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;result = %d\n&quot;</span>, result);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
-    <title>4.1 概述</title>
-    <url>/4.1%20%E6%A6%82%E8%BF%B0.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="41-概述"><a class="markdownIt-Anchor" href="#41-概述"></a> 4.1 概述</h1>
-<p>●函数是一种可重用的代码块，用于执行特定任务或完成特定功能</p>
-<p>●函数作用：对具备相同逻辑的代码进行封装，提高代码的编写效率，实现对代码的重用</p>
-<p>●函数作用演示代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                            _ooOoo_  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                           o8888888o  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                           88  .  88  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                           (| -_- |)  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                            O\\ = /O  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                        ____/`---&#x27;\\____  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                      .   &#x27; \\| |// `.  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                       / \\||| : |||// \\  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                     / _||||| -:- |||||- \\  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                       | | \\\\\\ - /// | |  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                     | \\_| &#x27;&#x27;\\---/&#x27;&#x27; | |  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                      \\ .-\\__ `-` ___/-. /  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                   ___`. .&#x27; /--.--\\ `. . __  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                .&quot;</span><span class="string">&quot; &#x27;&lt; `.___\\_&lt;|&gt;_/___.&#x27; &gt;&#x27;&quot;</span><span class="string">&quot;.  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;               | | : `- \\`.;`\\ _ /`;.`/ - ` : | |  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                 \\ \\ `-. \\_ __\\ /__ _/ .-` / /  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;         ======`-.____`-.___\\_____/___.-`____.-&#x27;======  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                            `=---=&#x27;  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;         .............................................  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  佛祖镇楼                  BUG辟易  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;          佛曰:  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  写字楼里写字间，写字间里程序员；  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  程序人员写程序，又拿程序换酒钱。  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  酒醒只在网上坐，酒醉还来网下眠；  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  酒醉酒醒日复日，网上网下年复年。  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  但愿老死电脑间，不愿鞠躬老板前；  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  奔驰宝马贵者趣，公交自行程序员。  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  别人笑我忒疯癫，我笑自己命太贱；  \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;                  不见满街漂亮妹，哪个归得程序员？\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 函数调用</span></span><br><span class="line">    func();</span><br><span class="line">    func();</span><br><span class="line">    func();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>●函数使用步骤</p>
-<p>○定义函数</p>
-<p>■理解为制作工具，工具只需要制作1次即可</p>
-<p>○调用函数</p>
-<p>■理解为使用工具</p>
-<p>●函数分类</p>
-<p>○系统函数，即库函数：这是由编译系统提供的，用户不必自己定义这些函数，可以直接使用它们，如我们常用的打印函数printf()。</p>
-<p>○自定义函数：用以解决用户的专门需要。</p>
 ]]></content>
   </entry>
   <entry>
@@ -8918,73 +8918,6 @@ ul{text-align:left}
 ]]></content>
   </entry>
   <entry>
-    <title>C语言</title>
-    <url>/C%E8%AF%AD%E8%A8%80.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>C语言</strong></p>
-<p>C语言的应用极其广泛，从网站后台，到底层操作系统，从多媒体应用到大型网络游戏，均可使用C语言来开发。<br />
-●C语言可以写网站后台程序<br />
-●C语言可以专门针对某个主题写出功能强大的程序库<br />
-●C语言可以写出大型游戏的引擎<br />
-●C语言可以写出另一个语言来<br />
-●C语言可以写操作系统和驱动程序，几乎都能用C语言编写<br />
-●任何设备只要配置了微处理器，几乎都支持C语言</p>
-<p>配套单词表：<a href="https://doc.weixin.qq.com/sheet/e3_AHcA_gZbAKcOPyccs4xRsuxOrwI10">https://doc.weixin.qq.com/sheet/e3_AHcA_gZbAKcOPyccs4xRsuxOrwI10</a></p>
-<p>\1. C语言前言</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/gb5opg8w5ysv63i3">1.1 C语言概述06-27 09:57</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/pt7xkqohhoptsgez">1.2 编程环境06-15 19:21</a></p>
-<p>\2. 基础语法</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/ilbpv8qtulhvo4bx">2.1 第一个C语言程序：HelloWorld06-15 19:21</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/op1g4v06982agf05">2.2 数据类型06-27 14:19</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/yqwtxhpczsiz5cat">2.3 数值表示06-27 14:21</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/yd9wny0x3reqadw0">2.4 输出和输入06-15 19:21</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/gq9qegcvfn70e5h1">2.5 运算符06-27 16:33</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/px7cnggzh2dp1hk8">2.6 类型转换06-27 16:39</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/px7cnggzh2dp1hk8">https://www.yuque.com/icheima/cprogram/px7cnggzh2dp1hk8</a>)</p>
-<p>\3. 控制语句</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/ad18dfocrxm7ng9o">3.1 程序执行的三大流程06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/ygec1agsxg7qv62a">3.2 分支语句06-30 11:20</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/hgvhqz73mq4y302g">3.3 循环语句06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/gvo08yrqma2xf9fi">3.4 跳转关键字06-27 17:45</a></p>
-<p>\4. 函数</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/gm859nvrz26p4ea2">4.1 概述06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/hpurfc9ihrbg7h9c">4.2 函数的使用06-28 21:16</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/el5xb73zcgo176vl">4.3 局部和全局变量06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/hf4vwxi5qgzgm2og">4.4 多文件编程06-15 19:22</a></p>
-<p>\5. 指针</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/wocor38rkxbkoyq9">5.1 指针基本语法06-29 17:32</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/wuu03nb0mnqeoe1h">5.2 指针和函数06-15 19:22</a></p>
-<p>\5. 指针</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/wocor38rkxbkoyq9">5.1 指针基本语法06-29 17:32</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/wuu03nb0mnqeoe1h">5.2 指针和函数06-15 19:22</a></p>
-<p>\6. 数组</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/btwp26gdppgaowdf">6.1 数组基本语法06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/rgu83hxfy9gulgpc">6.2 数组案例06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/hzopmqfsiaenzfbn">6.3 数组和指针06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/rvkuswmga7evrg1a">6.4 字符数组与字符串06-30 19:52</a></p>
-<p>\7. 复合类型(自定义类型)</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/uyhmsrzu39b4q50l">7.1 结构体06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/du9icl4m3oqmehlu">7.2 共用体(联合体)06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/ogcccxh5qr2qecgx">7.3 枚举06-15 19:22</a></p>
-<p>\8. 内存管理</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/fsuabicglgk6tl14">8.1 内存分布06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/rleu5g97dqbosnwo">8.2 堆区内存的使用06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/uq0go5z3rl9ih88k">8.3 内存分布代码分析06-15 19:22</a></p>
-<p>\9. 综合案例</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/ugocvg6y81dqa7kq">9.1 学生信息管理系统07-02 10:47</a></p>
-<p>\10. 配套练习</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/okywuz1pyikggvdg">第01天练习06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/fr5nfxgopwhirlk5">第02天练习06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/tge5asvv2bh9sgpq">第03天练习07-01 18:12</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/zc2pn4dtebcta7vs">第04天练习06-15 19:22</a></p>
-<p>\11. 代码步骤</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/ov4fde06tf8gvxth">第01天06-29 17:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/kb3n6652sa6qgx8x">第02天06-28 20:57</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/fq9m5gmzf8ukwvbr">第03天06-29 17:32</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/xx0raagvxdzqo2d8">第04天07-02 10:10</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/va3dfhdpdfkkn300">第05天07-02 10:41</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>C51版本Keil环境搭建</title>
     <url>/C51%E7%89%88%E6%9C%ACKeil%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="c51版本keil环境搭建"><a class="markdownIt-Anchor" href="#c51版本keil环境搭建"></a> C51版本Keil环境搭建</h1>
@@ -9054,6 +8987,73 @@ ul{text-align:left}
 <p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/21441195/1675755620298-50919175-d652-4ebd-8de4-595aa718cce8.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_27%2Ctext_6buR6ams56iL5bqP5ZGY%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10" alt="07.png" /></p>
 <p>3可通过搜索框搜索到stc相关芯片信息</p>
 <p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/21441195/1675755678580-6f04bea8-57d2-4085-bf42-ffaaab04e6ed.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_27%2Ctext_6buR6ams56iL5bqP5ZGY%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10" alt="08.png" /></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>C语言</title>
+    <url>/C%E8%AF%AD%E8%A8%80.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>C语言</strong></p>
+<p>C语言的应用极其广泛，从网站后台，到底层操作系统，从多媒体应用到大型网络游戏，均可使用C语言来开发。<br />
+●C语言可以写网站后台程序<br />
+●C语言可以专门针对某个主题写出功能强大的程序库<br />
+●C语言可以写出大型游戏的引擎<br />
+●C语言可以写出另一个语言来<br />
+●C语言可以写操作系统和驱动程序，几乎都能用C语言编写<br />
+●任何设备只要配置了微处理器，几乎都支持C语言</p>
+<p>配套单词表：<a href="https://doc.weixin.qq.com/sheet/e3_AHcA_gZbAKcOPyccs4xRsuxOrwI10">https://doc.weixin.qq.com/sheet/e3_AHcA_gZbAKcOPyccs4xRsuxOrwI10</a></p>
+<p>\1. C语言前言</p>
+<p><a href="https://www.yuque.com/icheima/cprogram/gb5opg8w5ysv63i3">1.1 C语言概述06-27 09:57</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/pt7xkqohhoptsgez">1.2 编程环境06-15 19:21</a></p>
+<p>\2. 基础语法</p>
+<p><a href="https://www.yuque.com/icheima/cprogram/ilbpv8qtulhvo4bx">2.1 第一个C语言程序：HelloWorld06-15 19:21</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/op1g4v06982agf05">2.2 数据类型06-27 14:19</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/yqwtxhpczsiz5cat">2.3 数值表示06-27 14:21</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/yd9wny0x3reqadw0">2.4 输出和输入06-15 19:21</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/gq9qegcvfn70e5h1">2.5 运算符06-27 16:33</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/px7cnggzh2dp1hk8">2.6 类型转换06-27 16:39</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/px7cnggzh2dp1hk8">https://www.yuque.com/icheima/cprogram/px7cnggzh2dp1hk8</a>)</p>
+<p>\3. 控制语句</p>
+<p><a href="https://www.yuque.com/icheima/cprogram/ad18dfocrxm7ng9o">3.1 程序执行的三大流程06-15 19:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/ygec1agsxg7qv62a">3.2 分支语句06-30 11:20</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/hgvhqz73mq4y302g">3.3 循环语句06-15 19:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/gvo08yrqma2xf9fi">3.4 跳转关键字06-27 17:45</a></p>
+<p>\4. 函数</p>
+<p><a href="https://www.yuque.com/icheima/cprogram/gm859nvrz26p4ea2">4.1 概述06-15 19:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/hpurfc9ihrbg7h9c">4.2 函数的使用06-28 21:16</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/el5xb73zcgo176vl">4.3 局部和全局变量06-15 19:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/hf4vwxi5qgzgm2og">4.4 多文件编程06-15 19:22</a></p>
+<p>\5. 指针</p>
+<p><a href="https://www.yuque.com/icheima/cprogram/wocor38rkxbkoyq9">5.1 指针基本语法06-29 17:32</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/wuu03nb0mnqeoe1h">5.2 指针和函数06-15 19:22</a></p>
+<p>\5. 指针</p>
+<p><a href="https://www.yuque.com/icheima/cprogram/wocor38rkxbkoyq9">5.1 指针基本语法06-29 17:32</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/wuu03nb0mnqeoe1h">5.2 指针和函数06-15 19:22</a></p>
+<p>\6. 数组</p>
+<p><a href="https://www.yuque.com/icheima/cprogram/btwp26gdppgaowdf">6.1 数组基本语法06-15 19:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/rgu83hxfy9gulgpc">6.2 数组案例06-15 19:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/hzopmqfsiaenzfbn">6.3 数组和指针06-15 19:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/rvkuswmga7evrg1a">6.4 字符数组与字符串06-30 19:52</a></p>
+<p>\7. 复合类型(自定义类型)</p>
+<p><a href="https://www.yuque.com/icheima/cprogram/uyhmsrzu39b4q50l">7.1 结构体06-15 19:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/du9icl4m3oqmehlu">7.2 共用体(联合体)06-15 19:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/ogcccxh5qr2qecgx">7.3 枚举06-15 19:22</a></p>
+<p>\8. 内存管理</p>
+<p><a href="https://www.yuque.com/icheima/cprogram/fsuabicglgk6tl14">8.1 内存分布06-15 19:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/rleu5g97dqbosnwo">8.2 堆区内存的使用06-15 19:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/uq0go5z3rl9ih88k">8.3 内存分布代码分析06-15 19:22</a></p>
+<p>\9. 综合案例</p>
+<p><a href="https://www.yuque.com/icheima/cprogram/ugocvg6y81dqa7kq">9.1 学生信息管理系统07-02 10:47</a></p>
+<p>\10. 配套练习</p>
+<p><a href="https://www.yuque.com/icheima/cprogram/okywuz1pyikggvdg">第01天练习06-15 19:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/fr5nfxgopwhirlk5">第02天练习06-15 19:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/tge5asvv2bh9sgpq">第03天练习07-01 18:12</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/zc2pn4dtebcta7vs">第04天练习06-15 19:22</a></p>
+<p>\11. 代码步骤</p>
+<p><a href="https://www.yuque.com/icheima/cprogram/ov4fde06tf8gvxth">第01天06-29 17:22</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/kb3n6652sa6qgx8x">第02天06-28 20:57</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/fq9m5gmzf8ukwvbr">第03天06-29 17:32</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/xx0raagvxdzqo2d8">第04天07-02 10:10</a></p>
+<p><a href="https://www.yuque.com/icheima/cprogram/va3dfhdpdfkkn300">第05天07-02 10:41</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -11903,17 +11903,6 @@ a6b2f1 转换为二进制结果为？<br />
 ]]></content>
   </entry>
   <entry>
-    <title>第05天</title>
-    <url>/%E7%AC%AC05%E5%A4%A9.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="第05天"><a class="markdownIt-Anchor" href="#第05天"></a> 第05天</h1>
-<p>hm01_共用体.c</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义共用体变量</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">// 1、所有成员的首地址是一样的</span></span><br><span class="line">   <span class="comment">// 2、共用体大小为最大成员类型的大小</span></span><br><span class="line">   <span class="comment">// 3、一个成员赋值，会影响另外的成员</span></span><br></pre></td></tr></table></figure>
-<p>hm02_枚举.c</p>
-<p>hm03_typedef.c</p>
-<p>hm04_堆区内存的使用.c</p>
-]]></content>
-  </entry>
-  <entry>
     <title>第04天练习</title>
     <url>/%E7%AC%AC04%E5%A4%A9%E7%BB%83%E4%B9%A0.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="第04天练习"><a class="markdownIt-Anchor" href="#第04天练习"></a> 第04天练习</h1>
@@ -11923,6 +11912,17 @@ a6b2f1 转换为二进制结果为？<br />
 4编写一个函数find_index，接受一个整型数组、数组的长度和一个整数作为参数，查找并返回该整数在数组中的索引位置。如果该整数不存在于数组中，则返回-1。在主函数中定义一个包含10元素的数组，并调用find_index函数查找某个整数的索引位置并输出。<br />
 5编写一个程序，接受用户输入的一个字符串，然后统计字符串中数字字符的个数并输出。<br />
 6定义一个结构体Person，包含人的姓名和年龄两个成员变量。编写程序，创建一个Person类型的结构体数组，包含3个人的信息，并输出每个人的姓名和年龄。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>第05天</title>
+    <url>/%E7%AC%AC05%E5%A4%A9.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="第05天"><a class="markdownIt-Anchor" href="#第05天"></a> 第05天</h1>
+<p>hm01_共用体.c</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义共用体变量</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">// 1、所有成员的首地址是一样的</span></span><br><span class="line">   <span class="comment">// 2、共用体大小为最大成员类型的大小</span></span><br><span class="line">   <span class="comment">// 3、一个成员赋值，会影响另外的成员</span></span><br></pre></td></tr></table></figure>
+<p>hm02_枚举.c</p>
+<p>hm03_typedef.c</p>
+<p>hm04_堆区内存的使用.c</p>
 ]]></content>
   </entry>
   <entry>
