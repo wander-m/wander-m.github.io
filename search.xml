@@ -11903,17 +11903,6 @@ a6b2f1 转换为二进制结果为？<br />
 ]]></content>
   </entry>
   <entry>
-    <title>第05天</title>
-    <url>/%E7%AC%AC05%E5%A4%A9.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="第05天"><a class="markdownIt-Anchor" href="#第05天"></a> 第05天</h1>
-<p>hm01_共用体.c</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义共用体变量</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">// 1、所有成员的首地址是一样的</span></span><br><span class="line">   <span class="comment">// 2、共用体大小为最大成员类型的大小</span></span><br><span class="line">   <span class="comment">// 3、一个成员赋值，会影响另外的成员</span></span><br></pre></td></tr></table></figure>
-<p>hm02_枚举.c</p>
-<p>hm03_typedef.c</p>
-<p>hm04_堆区内存的使用.c</p>
-]]></content>
-  </entry>
-  <entry>
     <title>第04天练习</title>
     <url>/%E7%AC%AC04%E5%A4%A9%E7%BB%83%E4%B9%A0.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="第04天练习"><a class="markdownIt-Anchor" href="#第04天练习"></a> 第04天练习</h1>
@@ -11923,6 +11912,17 @@ a6b2f1 转换为二进制结果为？<br />
 4编写一个函数find_index，接受一个整型数组、数组的长度和一个整数作为参数，查找并返回该整数在数组中的索引位置。如果该整数不存在于数组中，则返回-1。在主函数中定义一个包含10元素的数组，并调用find_index函数查找某个整数的索引位置并输出。<br />
 5编写一个程序，接受用户输入的一个字符串，然后统计字符串中数字字符的个数并输出。<br />
 6定义一个结构体Person，包含人的姓名和年龄两个成员变量。编写程序，创建一个Person类型的结构体数组，包含3个人的信息，并输出每个人的姓名和年龄。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>第05天</title>
+    <url>/%E7%AC%AC05%E5%A4%A9.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="第05天"><a class="markdownIt-Anchor" href="#第05天"></a> 第05天</h1>
+<p>hm01_共用体.c</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义共用体变量</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">// 1、所有成员的首地址是一样的</span></span><br><span class="line">   <span class="comment">// 2、共用体大小为最大成员类型的大小</span></span><br><span class="line">   <span class="comment">// 3、一个成员赋值，会影响另外的成员</span></span><br></pre></td></tr></table></figure>
+<p>hm02_枚举.c</p>
+<p>hm03_typedef.c</p>
+<p>hm04_堆区内存的使用.c</p>
 ]]></content>
   </entry>
   <entry>
@@ -12551,7 +12551,7 @@ a6b2f1 转换为二进制结果为？<br />
 <p>模拟电路和数字电路基础</p>
 <p>1220 次看过</p>
 <p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/27903758/1686828242361-250d15b1-db77-482d-b3f4-bb6613ee3c4e.png" alt="img" /></p>
-<p><a href="/C%E8%AF%AD%E8%A8%80.md">C语言</a></p>
+<p><a href="/C%E8%AF%AD%E8%A8%80">C语言</a></p>
 <a href="#">Post not found: C语言 C语言</a>
 <a href="#">Post not found: C语言</a>
 <p>C语言的应用极其广泛，从网站后台，到底层操作系统，到嵌入式开发，从多媒体应用到大型网络游戏，均可使用C语言来开发。</p>
