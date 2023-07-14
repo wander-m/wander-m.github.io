@@ -1,0 +1,422 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>STC8增强型单片机开发 | Wanderer</title><meta name="author" content="wander-m"><meta name="copyright" content="wander-m"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="STC8增强型单片机开发 已收藏 47 文档74714 字  👋  欢迎来到黑马SCT8增强型单片机知识库 这里是黑马stc8的开发的相关文档，有问题欢迎留言，会统一在问题汇总中解答。  网上一些人说51单片机过时了，太LOW了，能说出这种话的一看就没做过产品研发，没上过班，对行业一无所知。 去boss直聘看看就知道了，大量企业招聘有STC，赛元，新唐相关开发经验的工程师，月薪8~15K。 ​">
+<meta property="og:type" content="article">
+<meta property="og:title" content="STC8增强型单片机开发">
+<meta property="og:url" content="https://wander-m.github.io/STC8%E5%A2%9E%E5%BC%BA%E5%9E%8B%E5%8D%95%E7%89%87%E6%9C%BA%E5%BC%80%E5%8F%91">
+<meta property="og:site_name" content="Wanderer">
+<meta property="og:description" content="STC8增强型单片机开发 已收藏 47 文档74714 字  👋  欢迎来到黑马SCT8增强型单片机知识库 这里是黑马stc8的开发的相关文档，有问题欢迎留言，会统一在问题汇总中解答。  网上一些人说51单片机过时了，太LOW了，能说出这种话的一看就没做过产品研发，没上过班，对行业一无所知。 去boss直聘看看就知道了，大量企业招聘有STC，赛元，新唐相关开发经验的工程师，月薪8~15K。 ​">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2023-07-13T13:57:15.112Z">
+<meta property="article:modified_time" content="2023-07-14T05:27:23.407Z">
+<meta property="article:author" content="wander-m">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://wander-m.github.io/STC8%E5%A2%9E%E5%BC%BA%E5%9E%8B%E5%8D%95%E7%89%87%E6%9C%BA%E5%BC%80%E5%8F%91"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//pingjs.qq.com"/><link rel="preconnect" href="//s4.cnzz.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="google57e7d8264c9b294a.html"/><meta name="baidu-site-verification" content="76fdb177297c43af065ef2a32e6816bd"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?93097b713a8d0f39dc6d84db9d4f39ea";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-180982678-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-180982678-1');
+</script><script>var _mtac = {};
+(function() {
+    var mta = document.createElement("script");
+    mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+    mta.setAttribute("name", "MTAH5");
+    mta.setAttribute("sid", "500732292");
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(mta, s);
+})();
+</script><script async="async" data-pjax="data-pjax" src="https://s4.cnzz.com/z_stat.php?id=1279376944&amp;web_id=1279376944"></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: wander-m","link":"链接: ","source":"来源: Wanderer","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-07-14 13:27:23'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><style type="text/css">#toggle-sidebar {bottom: 80px}</style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5124189275098717" crossorigin="anonymous"></script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Wanderer" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="https://i.loli.net/2020/11/23/2ayS5hvOtVdDGNT.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">80</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> book</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Wanderer</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> book</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">STC8增强型单片机开发</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-13T13:57:15.112Z" title="发表于 2023-07-13 21:57:15">2023-07-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-14T05:27:23.407Z" title="更新于 2023-07-14 13:27:23">2023-07-14</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>STC8增强型单片机开发</strong></p>
+<p>已收藏</p>
+<p><strong>47</strong> 文档<strong>74714</strong> 字</p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima"><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/27903758/1680583926393-avatar/b597eb12-befb-4ac8-81ca-0764e1f95f22.png?x-oss-process=image%2Fresize%2Cm_fill%2Cw_56%2Ch_56%2Fformat%2Cpng" alt="集成电路与机器人应用开发" /></a></p>
+<p>👋  欢迎来到黑马SCT8增强型单片机知识库</p>
+<p>这里是黑马stc8的开发的相关文档，有问题欢迎留言，会统一在问题汇总中解答。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gw.alipayobjects.com/mdn/rms_15e52e/afts/img/A*pm-hQY3BLV8AAAAAAAAAAAAAARQnAQ" alt="img" /></p>
+<p>网上一些人说51单片机过时了，太LOW了，能说出这种话的一看就没做过产品研发，没上过班，对行业一无所知。</p>
+<p>去boss直聘看看就知道了，大量企业招聘有STC，赛元，新唐相关开发经验的工程师，月薪8~15K。</p>
+<p>​     嵌入式企业在做mcu选型的时候，成本是一个重要的考虑因素。出货量几百万的小家电设备，mcu上能便宜两毛钱就是非常客观的利润， 能用1块钱的mcu实现的功能，干嘛要买个几十块的stm32来实现？如果你把stm32实现的功能，在51单片机上实现出来，这才是真正的牛逼。</p>
+<p>​     另外生态系统和开发工具也非常重要，8051架构专利已经到期，现在没有专利问题，开发工具丰富，开发简单，大多数外设都有例程，历史悠久非常的可靠和稳定。</p>
+<p>​</p>
+<p>​       最后一个最重要的东西就是供货周期，国产的芯片供货稳定保证。</p>
+<p>stc现在有32位的单片机，但是建议入门选8位的，对于新手来讲，stc8便宜，资源丰富，各种外设都支持，学习难度不大，作为入门是最佳选择。另外因为价格便宜，在小家电，各种低价智能硬件设备上有大量应用场景，所以市场上有很多企业的招聘岗位需要有stc8的经验。</p>
+<p>学习内容： 会读芯片手册，能看懂原理图，能自己绘制开发板，点灯，pwm， adc，中断系统，电位器，数码管，温湿度传感器，独立按键，矩阵键盘，rtc时钟，外部中断，IIC协议， SPI协议， USB的hid协议，uart通讯，蓝牙芯片通讯等。 学习以上内容一定要配合逻辑分析仪去学习。大量低水平的嵌入式开发工程师觉得嵌入式很难，主要原因是调试工具没听说过，或者不会用。</p>
+<p>基本上上面的内容每个案例都熟悉，就差不多能找个八九千工资的单片机开发工程师的工作了。</p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/wypvl6qv7g59sms4"><br />
+STC初级考试题昨天 14:44</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/nrqlgacw7uamrzc4">问题汇总✍️07-05 22:43</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/rha5cw25afli8hk4">知识地图🗺️07-05 10:04</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/abl6co0dsqsaom5p">模板代码📝昨天 21:00</a></p>
+<p>第一个程序</p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/hsfp6pgneomsg96i">STC8H核心板07-04 15:36</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/kaxm9g9ft9riy6yz">C51版本Keil环境搭建07-05 18:58</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/eeeeh17ecg77mgeg">点亮第一盏灯04-08 16:46</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/tfht5upathln5yl6">GPIO的理解04-08 14:41</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/oxdw1ki2ggyxr3mt">库函数07-06 21:56</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/px60g8leo2saqz8r">逻辑分析仪04-08 14:41</a></p>
+<p>STC基础开发</p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/akdb6p6veb9tgch3">AStyle格式化工具07-06 15:32</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/zgfrmn8lfq8ei4mc">串口调试TTL07-06 21:58</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/yoffy6qyanqlr2fu">中断系统INT07-07 23:38</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/lsa5qivdmgqe6elm">系统时钟07-07 14:15</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/zgfrmn8lfq8ei4mc"><br />
+串口调试TTL07-06 21:58</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/yoffy6qyanqlr2fu">中断系统INT07-07 23:38</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/lsa5qivdmgqe6elm">系统时钟07-07 14:15</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/rz9hmk0wolgrvz8n">extern关键字04-10 08:14</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/loaw8ggm1mgbbsmv">定时器Timer07-07 16:39</a></p>
+<p>STC进阶开发</p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/cy6z4mqechrqgn2d">黑马STC8H扩展版06-22 16:08</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/lvc54m4u4bkct5xr">LED灯07-08 09:21</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/vz2lklx0gq1mdb1v">LED呼吸灯(PWM)07-08 12:43</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/ycevzby791b987gi">震动马达04-10 00:16</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/she4ctr86xxsmq8e">震动马达PWM07-11 08:36</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/rsbqp1cogp1wtu87">电位器案例(ADC)07-10 10:57</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/im0nczn1iugwr4y4">热敏电阻昨天 20:10</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/bhne4ly8gq0e3hgg">独立按键04-10 00:16</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/zwf2dfq7gzsatpki">数码管07-11 16:48</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/kmz2mllvxs1uvdfy">数码管207-11 17:05</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/xrbq05khc2erpcau">蜂鸣器今天 12:04</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/gvl6nzzb43ig6bn6">RTC时钟今天 05:47</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/ckgwsippsg0xp1gd">I2C总线今天 00:53</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/ckgwsippsg0xp1gd">https://www.yuque.com/icheima/stc8h/ckgwsippsg0xp1gd</a>)</p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/uxa88wumubrdgmko">外部中断(INT)06-25 21:12</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/ldy7mcegpfd5zpez">OLED显示器(SPI)04-20 17:05</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/ynizcfhlu83myq2g">矩阵键盘06-28 09:20</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/wut9r3gh2e4epn2b">HID协议06-29 11:17</a></p>
+<p>STC设计与RTX51</p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/ec73hcqlig1mt5k4">核心板设计07-01 11:29</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/yqug1viu5iupaepi">RTX51操作系统04-25 07:32</a></p>
+<p>巡线小车项目</p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/xeblz42ehepsdgd7">蓝牙智能巡线小车06-14 12:24</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/vp5nkvpny09bmzrm">常规功能实现07-03 15:05</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/ke95hro1u6pbnbg5">超声波模块04-28 07:39</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/ckn6v6zpz2rxktnp">循迹功能04-30 08:16</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/nkps02tldvkew0vc">电机控制07-09 16:40</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/nxdgd4em4cqk65ee">蓝牙通讯04-29 22:37</a></p>
+<p>附录：拓展知识点</p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/pkci1c60sl8aytmy">焊接小知识07-04 19:02</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/ou352z4txrsnn58a">拓展小知识👄今天 08:41</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/sp7vazs576dxpqef">ASCII码对照表07-05 17:24</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/icheima/stc8h/ngmiq52dqk8bt06l">STC开发内联汇编04-18 12:06</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">wander-m</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://wander-m.github.io/STC8%E5%A2%9E%E5%BC%BA%E5%9E%8B%E5%8D%95%E7%89%87%E6%9C%BA%E5%BC%80%E5%8F%91">https://wander-m.github.io/STC8%E5%A2%9E%E5%BC%BA%E5%9E%8B%E5%8D%95%E7%89%87%E6%9C%BA%E5%BC%80%E5%8F%91</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://wander-m.github.io" target="_blank">Wanderer</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/STC%E5%88%9D%E7%BA%A7%E8%80%83%E8%AF%95%E9%A2%98"><img class="prev-cover" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">STC初级考试题</div></div></a></div><div class="next-post pull-right"><a href="/%E7%AC%AC05%E5%A4%A9"><img class="next-cover" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">第05天</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Livere</span><span class="switch-btn"></span><span class="second-comment">Gitalk</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81MTg0MS8yODMyMg=="></div></div><div><div id="gitalk-container"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://i.loli.net/2020/11/23/2ayS5hvOtVdDGNT.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">wander-m</div><div class="author-info__description">You only live once</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">80</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/wander-m"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/wander-m" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:weilaiyilai54@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">Hello!!!</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/I2C%E6%80%BB%E7%BA%BF" title="I2C总线">I2C总线</a><time datetime="2023-07-14T03:59:32.975Z" title="发表于 2023-07-14 11:59:32">2023-07-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/RTC%E6%97%B6%E9%92%9F" title="RTC时钟">RTC时钟</a><time datetime="2023-07-14T03:55:52.656Z" title="发表于 2023-07-14 11:55:52">2023-07-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/%E8%9C%82%E9%B8%A3%E5%99%A8" title="蜂鸣器">蜂鸣器</a><time datetime="2023-07-14T03:36:46.114Z" title="发表于 2023-07-14 11:36:46">2023-07-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/%E6%95%B0%E7%A0%81%E7%AE%A12" title="数码管2">数码管2</a><time datetime="2023-07-14T03:28:48.298Z" title="发表于 2023-07-14 11:28:48">2023-07-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/%E6%95%B0%E7%A0%81%E7%AE%A1" title="数码管">数码管</a><time datetime="2023-07-14T03:22:39.309Z" title="发表于 2023-07-14 11:22:39">2023-07-14</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By wander-m</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js', function () {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'dark',
+      })
+      true && mermaid.init()
+    })
+  }
+}</script><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk({
+      clientID: '5e173094ca232530defe',
+      clientSecret: '2a5bfec2e5b8bc316d4f27a83c3e32af671c22d8',
+      repo: 'wander-m.github.io',
+      owner: 'wander-m',
+      admin: ['wander-m'],
+      id: '2d16f276eda315c180581a89e0ade8b2',
+      language: 'zh-CN',
+      perPage: 10,
+      distractionFreeMode: false,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      updateCountCallback: commentCount
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    $.getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js', initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Livere' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="7790932964" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script src="//code.tidio.co/m7gse0ev5mozygouvva3vteqsksbbtef.js" async="async"></script><script>function onTidioChatApiReady() {
+  window.tidioChatApi.hide();
+  window.tidioChatApi.on("close", function() {
+    window.tidioChatApi.hide();
+  });
+}
+if (window.tidioChatApi) {
+  window.tidioChatApi.on("ready", onTidioChatApiReady);
+} else {
+  document.addEventListener("tidioChat-ready", onTidioChatApiReady);
+}
+
+var chatBtnFn = () => {
+  document.getElementById("chat_btn").addEventListener("click", function(){
+    window.tidioChatApi.show();
+    window.tidioChatApi.open();
+  });
+}
+chatBtnFn()
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (true) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', 'UA-180982678-1', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (true) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script></div></body></html>
