@@ -873,137 +873,6 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 ]]></content>
   </entry>
   <entry>
-    <title>树莓派内网穿透实现远程访问</title>
-    <url>/92270b23.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h3>
-<p>最近入手了一块raspberry 3b+，想要随时随地访问树莓派需要配置内网穿透。我最初找了一些这方便的文章，根据步骤配置，效果不怎么样。然后用了花生壳，体验也不好。后来发现一款强大的免费内网穿透软件，比起付费软件毫不逊色。</p>
-<h3 id="配置方案"><a class="markdownIt-Anchor" href="#配置方案"></a> 配置方案</h3>
-<h4 id="注册sakura-frp账号"><a class="markdownIt-Anchor" href="#注册sakura-frp账号"></a> 注册Sakura frp账号</h4>
-<p>百度<a href="https://www.natfrp.com/">Sakura</a>，第一个就是官网，长这样<br />
-<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/11/30/r4tijkQRsA2HC9z.png" alt="image.png" /><br />
-点击注册,按照提示填写资料。<br />
-<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/11/30/ZaTcFfkCz3neRdM.png" alt="image.png" /><br />
-注册完成后进入管理面板，记住访问密匙，后面会用到。<br />
-<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/11/30/Mh5quw9TEni4OjR.png" alt="image.png" /></p>
-<h4 id="确认系统架构"><a class="markdownIt-Anchor" href="#确认系统架构"></a> 确认系统架构</h4>
-<p>树莓派官方系统的系统架构是arm，如果使用的其它系统，执行下面命令，根据输出结果确定系统架构</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ uname -a</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">架构</th>
-<th style="text-align:center">输出结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">i386</td>
-<td style="text-align:center">i386, i686</td>
-</tr>
-<tr>
-<td style="text-align:center">amd64</td>
-<td style="text-align:center">x86_64</td>
-</tr>
-<tr>
-<td style="text-align:center">arm</td>
-<td style="text-align:center">arm, armv7l</td>
-</tr>
-<tr>
-<td style="text-align:center">arm64</td>
-<td style="text-align:center">aarch64, armv8l</td>
-</tr>
-<tr>
-<td style="text-align:center">mips</td>
-<td style="text-align:center">mips</td>
-</tr>
-<tr>
-<td style="text-align:center">mips64</td>
-<td style="text-align:center">mips64</td>
-</tr>
-<tr>
-<td style="text-align:center">不支持</td>
-<td style="text-align:center">alpha, arc, blackfin, c6x, cris, frv, h8300, hexagon, ia64, m32r, m68k, metag, microblaze, mn10300, nios2, openrisc, parisc, parisc64, ppc, ppcle, ppc64, ppc64le, s390, s390x, score, sh, sh64, sparc, sparc64, tile, unicore32, xtensa</td>
-</tr>
-</tbody>
-</table>
-<p>如果您的输出结果不在上面列表中，可以通过[百度](<a href="https://www.baidu.com/%E8%BF%9B%E8%A1%8C%E6%90%9C%E7%B4%A2">https://www.baidu.com/进行搜索</a></p>
-<h4 id="安装frpc"><a class="markdownIt-Anchor" href="#安装frpc"></a> 安装frpc</h4>
-<p>登录<a href="https://www.natfrp.com/">管理面板</a>，在侧边栏点击 “软件下载” :<br />
-根据系统架构复制相应的下载地址<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-1.png" alt="image.png" /><br />
-使用下面的命令进入<code>/usr/local/bin</code>目录并下载文件</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> curl -Lo frpc 您刚才复制的下载地址</span></span><br></pre></td></tr></table></figure>
-<p><img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-2.png" alt="image.png" /></p>
-<p>然后使用下面的命令设置正确的权限并检查输出</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># chmod 755 frpc</span></span><br><span class="line"><span class="comment"># ls -ls frpc</span></span><br></pre></td></tr></table></figure>
-<p><img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-3.png" alt="image.png" /><br />
-如果您看到和图里一样的输出，frpc 就安装完成并可以正常使用了。您可以执行下面的命令来再次确认</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ frpc -v</span><br></pre></td></tr></table></figure>
-<h4 id="配置开机自启后台运行"><a class="markdownIt-Anchor" href="#配置开机自启后台运行"></a> 配置开机自启/后台运行</h4>
-<p>让<code>frpc</code>在开机时自启或在后台运行，可以让你在任何地方连接树莓派，这需要将<code>frpc</code>注册为系统服务</p>
-<p>首先，您要搞清楚您的<code>Linux</code>系统使用的 初始化系统 是什么，官方文档提供三种常见初始化系统的配置指南:</p>
-<ul>
-<li><a href="https://doc.natfrp.com/#/frpc/service/systemd">Systemd</a></li>
-<li><a href="https://doc.natfrp.com/#/frpc/service/upstart">Upstart</a></li>
-<li><a href="https://doc.natfrp.com/#/frpc/service/sysvinit">SysV-Init</a></li>
-</ul>
-<p>执行下面的命令然后查看输出，确定您的初始化系统</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if [[ `/sbin/init --version` =~ upstart ]]; then echo Upstart; elif [[ `systemctl` =~ -\.mount ]]; then echo Systemd; elif [[ -f /etc/init.d/cron &amp;&amp; ! -h /etc/init.d/cron ]]; then echo SysV-Init; else echo Unknown; fi</span></span><br></pre></td></tr></table></figure>
-<p><img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-4.png" alt="image.png" /></p>
-<p>目前官方文档上只有<code>Systemd</code>的配置指南，另外两个还没写好，本人目前用的是树莓派官方系统，初始化系统是<code>Systemd</code>，下面是<code>Systemd</code>配置<code>frpc</code>开机自启/后台运行的方法</p>
-<h5 id="编写配置文件"><a class="markdownIt-Anchor" href="#编写配置文件"></a> 编写配置文件</h5>
-<p><code>Systemd</code>的<code>Unit</code>配置文件 通常位于这些目录中:</p>
-<ul>
-<li>/lib/systemd/system</li>
-<li>/etc/systemd/system<br />
-本文选用第一个目录来放置<code>frpc</code>的<code>Unit</code>配置文件，并且<code>frpc</code>启用后报错退出时每分钟会自动重启一次<br />
-执行下面命令</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vi /lib/systemd/system/frpc@.service</span></span><br></pre></td></tr></table></figure>
-<p>其中<code>vi</code>是一个文本编辑器，可以换成其它的<br />
-输入下述内容</p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[Unit]</span></span><br><span class="line"><span class="attr">Description</span>=SakuraFrp Service</span><br><span class="line"><span class="attr">After</span>=network.target</span><br><span class="line"></span><br><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Type</span>=idle</span><br><span class="line"><span class="attr">User</span>=nobody</span><br><span class="line"><span class="attr">Restart</span>=<span class="literal">on</span>-failure</span><br><span class="line"><span class="attr">RestartSec</span>=<span class="number">60</span>s</span><br><span class="line"><span class="attr">ExecStart</span>=/usr/local/bin/frpc -f %i</span><br><span class="line"></span><br><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span>=multi-user.target</span><br></pre></td></tr></table></figure>
-<p>执行下面的命令重载<code>Systemd</code>，这样这样服务就配置完成了</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl daemon-reload</span></span><br></pre></td></tr></table></figure>
-<h5 id="配置开机自启"><a class="markdownIt-Anchor" href="#配置开机自启"></a> 配置开机自启</h5>
-<p>使用下面的命令启用/禁用服务，<code>enable</code>是启用，<code>disable</code>是禁用，操作完成后再用<code>status</code>检查一下状态</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl &lt;enable|disable&gt; &lt;Unit名称&gt;</span></span><br><span class="line"><span class="comment"># systemctl status &lt;Unit名称&gt;</span></span><br></pre></td></tr></table></figure>
-<p>如果一切正常，您会看到我图中的两个红色标注的内容</p>
-<blockquote>
-<p>没看到第一个创建符号链接的提示也是正常的，只要下面的状态显示为<code>enabled</code>就行<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/service/_images/systemd-4.png" alt="image.png" /></p>
-</blockquote>
-<h4 id="启动器的基本设置"><a class="markdownIt-Anchor" href="#启动器的基本设置"></a> 启动器的基本设置</h4>
-<p>登录<a href="https://www.natfrp.com/">管理面板</a>，点击侧边栏的“软件下载”，下载推荐版本，如果打不开再换下面的传统启动器<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-0.png" alt="image.png" /><br />
-下载完毕后解压，点击<code>SakuraLauncher.exe</code>运行启动器（如果下载的是传统启动器运行<code>LegacyLauncher.exe</code>）进入用户信息界面，复制访问密钥（也叫token）到启动器点击登录<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-3.png" alt="image.png" /><br />
-创建隧道或在官网创建隧道，隧道创建成功后可通过启动器启动隧道<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-7.png" alt="image.png" /><br />
-启动成功后右下角会弹出通知，提示隧道连接方式。该通知可以在设置中通过 关闭隧道状态提示 选项禁用<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-8.png" alt="image.png" /><br />
-转到日志标签可以复制连接方式<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-9.png" alt="image" /></p>
-<h4 id="关于隧道"><a class="markdownIt-Anchor" href="#关于隧道"></a> 关于隧道</h4>
-<h5 id="启动停止隧道"><a class="markdownIt-Anchor" href="#启动停止隧道"></a> 启动/停止隧道</h5>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl &lt;start|stop&gt; &lt;Unit名称&gt;</span></span><br></pre></td></tr></table></figure>
-<p>使用上面命令启动/停止隧道，<code>start</code>是启动，<code>stop</code>是停止<br />
-其中&lt;Unit名称&gt;为&lt;你的Token&gt;:&lt;隧道ID&gt;[隧道ID[隧道ID…]]<br />
-如：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl start frpc@wdnmdtoken666666:12345</span></span><br></pre></td></tr></table></figure>
-<h5 id="查看隧道状态"><a class="markdownIt-Anchor" href="#查看隧道状态"></a> 查看隧道状态</h5>
-<p>可以通过下面命令查看特定隧道状态</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl status &lt;Unit名称&gt;</span></span><br></pre></td></tr></table></figure>
-<p>或者通过下面命令查看所有隧道状态</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl list-units frpc@*</span></span><br></pre></td></tr></table></figure>
-<h3 id="附录"><a class="markdownIt-Anchor" href="#附录"></a> 附录</h3>
-<p>参考：<a href="https://doc.natfrp.com/#/"><code>Sakura Frp</code>帮助文档</a></p>
-]]></content>
-      <tags>
-        <tag>raspberry</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>腾讯云从业者认证课程笔记</title>
     <url>/958ae9f3.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="云计算基础"><a class="markdownIt-Anchor" href="#云计算基础"></a> 云计算基础</h2>
@@ -6471,6 +6340,137 @@ ul{text-align:left}
       </tags>
   </entry>
   <entry>
+    <title>树莓派内网穿透实现远程访问</title>
+    <url>/92270b23.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h3>
+<p>最近入手了一块raspberry 3b+，想要随时随地访问树莓派需要配置内网穿透。我最初找了一些这方便的文章，根据步骤配置，效果不怎么样。然后用了花生壳，体验也不好。后来发现一款强大的免费内网穿透软件，比起付费软件毫不逊色。</p>
+<h3 id="配置方案"><a class="markdownIt-Anchor" href="#配置方案"></a> 配置方案</h3>
+<h4 id="注册sakura-frp账号"><a class="markdownIt-Anchor" href="#注册sakura-frp账号"></a> 注册Sakura frp账号</h4>
+<p>百度<a href="https://www.natfrp.com/">Sakura</a>，第一个就是官网，长这样<br />
+<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/11/30/r4tijkQRsA2HC9z.png" alt="image.png" /><br />
+点击注册,按照提示填写资料。<br />
+<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/11/30/ZaTcFfkCz3neRdM.png" alt="image.png" /><br />
+注册完成后进入管理面板，记住访问密匙，后面会用到。<br />
+<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/11/30/Mh5quw9TEni4OjR.png" alt="image.png" /></p>
+<h4 id="确认系统架构"><a class="markdownIt-Anchor" href="#确认系统架构"></a> 确认系统架构</h4>
+<p>树莓派官方系统的系统架构是arm，如果使用的其它系统，执行下面命令，根据输出结果确定系统架构</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ uname -a</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">输出结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">i386</td>
+<td style="text-align:center">i386, i686</td>
+</tr>
+<tr>
+<td style="text-align:center">amd64</td>
+<td style="text-align:center">x86_64</td>
+</tr>
+<tr>
+<td style="text-align:center">arm</td>
+<td style="text-align:center">arm, armv7l</td>
+</tr>
+<tr>
+<td style="text-align:center">arm64</td>
+<td style="text-align:center">aarch64, armv8l</td>
+</tr>
+<tr>
+<td style="text-align:center">mips</td>
+<td style="text-align:center">mips</td>
+</tr>
+<tr>
+<td style="text-align:center">mips64</td>
+<td style="text-align:center">mips64</td>
+</tr>
+<tr>
+<td style="text-align:center">不支持</td>
+<td style="text-align:center">alpha, arc, blackfin, c6x, cris, frv, h8300, hexagon, ia64, m32r, m68k, metag, microblaze, mn10300, nios2, openrisc, parisc, parisc64, ppc, ppcle, ppc64, ppc64le, s390, s390x, score, sh, sh64, sparc, sparc64, tile, unicore32, xtensa</td>
+</tr>
+</tbody>
+</table>
+<p>如果您的输出结果不在上面列表中，可以通过[百度](<a href="https://www.baidu.com/%E8%BF%9B%E8%A1%8C%E6%90%9C%E7%B4%A2">https://www.baidu.com/进行搜索</a></p>
+<h4 id="安装frpc"><a class="markdownIt-Anchor" href="#安装frpc"></a> 安装frpc</h4>
+<p>登录<a href="https://www.natfrp.com/">管理面板</a>，在侧边栏点击 “软件下载” :<br />
+根据系统架构复制相应的下载地址<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-1.png" alt="image.png" /><br />
+使用下面的命令进入<code>/usr/local/bin</code>目录并下载文件</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> curl -Lo frpc 您刚才复制的下载地址</span></span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-2.png" alt="image.png" /></p>
+<p>然后使用下面的命令设置正确的权限并检查输出</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># chmod 755 frpc</span></span><br><span class="line"><span class="comment"># ls -ls frpc</span></span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-3.png" alt="image.png" /><br />
+如果您看到和图里一样的输出，frpc 就安装完成并可以正常使用了。您可以执行下面的命令来再次确认</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ frpc -v</span><br></pre></td></tr></table></figure>
+<h4 id="配置开机自启后台运行"><a class="markdownIt-Anchor" href="#配置开机自启后台运行"></a> 配置开机自启/后台运行</h4>
+<p>让<code>frpc</code>在开机时自启或在后台运行，可以让你在任何地方连接树莓派，这需要将<code>frpc</code>注册为系统服务</p>
+<p>首先，您要搞清楚您的<code>Linux</code>系统使用的 初始化系统 是什么，官方文档提供三种常见初始化系统的配置指南:</p>
+<ul>
+<li><a href="https://doc.natfrp.com/#/frpc/service/systemd">Systemd</a></li>
+<li><a href="https://doc.natfrp.com/#/frpc/service/upstart">Upstart</a></li>
+<li><a href="https://doc.natfrp.com/#/frpc/service/sysvinit">SysV-Init</a></li>
+</ul>
+<p>执行下面的命令然后查看输出，确定您的初始化系统</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if [[ `/sbin/init --version` =~ upstart ]]; then echo Upstart; elif [[ `systemctl` =~ -\.mount ]]; then echo Systemd; elif [[ -f /etc/init.d/cron &amp;&amp; ! -h /etc/init.d/cron ]]; then echo SysV-Init; else echo Unknown; fi</span></span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-4.png" alt="image.png" /></p>
+<p>目前官方文档上只有<code>Systemd</code>的配置指南，另外两个还没写好，本人目前用的是树莓派官方系统，初始化系统是<code>Systemd</code>，下面是<code>Systemd</code>配置<code>frpc</code>开机自启/后台运行的方法</p>
+<h5 id="编写配置文件"><a class="markdownIt-Anchor" href="#编写配置文件"></a> 编写配置文件</h5>
+<p><code>Systemd</code>的<code>Unit</code>配置文件 通常位于这些目录中:</p>
+<ul>
+<li>/lib/systemd/system</li>
+<li>/etc/systemd/system<br />
+本文选用第一个目录来放置<code>frpc</code>的<code>Unit</code>配置文件，并且<code>frpc</code>启用后报错退出时每分钟会自动重启一次<br />
+执行下面命令</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vi /lib/systemd/system/frpc@.service</span></span><br></pre></td></tr></table></figure>
+<p>其中<code>vi</code>是一个文本编辑器，可以换成其它的<br />
+输入下述内容</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[Unit]</span></span><br><span class="line"><span class="attr">Description</span>=SakuraFrp Service</span><br><span class="line"><span class="attr">After</span>=network.target</span><br><span class="line"></span><br><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Type</span>=idle</span><br><span class="line"><span class="attr">User</span>=nobody</span><br><span class="line"><span class="attr">Restart</span>=<span class="literal">on</span>-failure</span><br><span class="line"><span class="attr">RestartSec</span>=<span class="number">60</span>s</span><br><span class="line"><span class="attr">ExecStart</span>=/usr/local/bin/frpc -f %i</span><br><span class="line"></span><br><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span>=multi-user.target</span><br></pre></td></tr></table></figure>
+<p>执行下面的命令重载<code>Systemd</code>，这样这样服务就配置完成了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl daemon-reload</span></span><br></pre></td></tr></table></figure>
+<h5 id="配置开机自启"><a class="markdownIt-Anchor" href="#配置开机自启"></a> 配置开机自启</h5>
+<p>使用下面的命令启用/禁用服务，<code>enable</code>是启用，<code>disable</code>是禁用，操作完成后再用<code>status</code>检查一下状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl &lt;enable|disable&gt; &lt;Unit名称&gt;</span></span><br><span class="line"><span class="comment"># systemctl status &lt;Unit名称&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果一切正常，您会看到我图中的两个红色标注的内容</p>
+<blockquote>
+<p>没看到第一个创建符号链接的提示也是正常的，只要下面的状态显示为<code>enabled</code>就行<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/service/_images/systemd-4.png" alt="image.png" /></p>
+</blockquote>
+<h4 id="启动器的基本设置"><a class="markdownIt-Anchor" href="#启动器的基本设置"></a> 启动器的基本设置</h4>
+<p>登录<a href="https://www.natfrp.com/">管理面板</a>，点击侧边栏的“软件下载”，下载推荐版本，如果打不开再换下面的传统启动器<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-0.png" alt="image.png" /><br />
+下载完毕后解压，点击<code>SakuraLauncher.exe</code>运行启动器（如果下载的是传统启动器运行<code>LegacyLauncher.exe</code>）进入用户信息界面，复制访问密钥（也叫token）到启动器点击登录<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-3.png" alt="image.png" /><br />
+创建隧道或在官网创建隧道，隧道创建成功后可通过启动器启动隧道<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-7.png" alt="image.png" /><br />
+启动成功后右下角会弹出通知，提示隧道连接方式。该通知可以在设置中通过 关闭隧道状态提示 选项禁用<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-8.png" alt="image.png" /><br />
+转到日志标签可以复制连接方式<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-9.png" alt="image" /></p>
+<h4 id="关于隧道"><a class="markdownIt-Anchor" href="#关于隧道"></a> 关于隧道</h4>
+<h5 id="启动停止隧道"><a class="markdownIt-Anchor" href="#启动停止隧道"></a> 启动/停止隧道</h5>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl &lt;start|stop&gt; &lt;Unit名称&gt;</span></span><br></pre></td></tr></table></figure>
+<p>使用上面命令启动/停止隧道，<code>start</code>是启动，<code>stop</code>是停止<br />
+其中&lt;Unit名称&gt;为&lt;你的Token&gt;:&lt;隧道ID&gt;[隧道ID[隧道ID…]]<br />
+如：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl start frpc@wdnmdtoken666666:12345</span></span><br></pre></td></tr></table></figure>
+<h5 id="查看隧道状态"><a class="markdownIt-Anchor" href="#查看隧道状态"></a> 查看隧道状态</h5>
+<p>可以通过下面命令查看特定隧道状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl status &lt;Unit名称&gt;</span></span><br></pre></td></tr></table></figure>
+<p>或者通过下面命令查看所有隧道状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl list-units frpc@*</span></span><br></pre></td></tr></table></figure>
+<h3 id="附录"><a class="markdownIt-Anchor" href="#附录"></a> 附录</h3>
+<p>参考：<a href="https://doc.natfrp.com/#/"><code>Sakura Frp</code>帮助文档</a></p>
+]]></content>
+      <tags>
+        <tag>raspberry</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.1 C语言概述</title>
     <url>/1.1%20C%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="11-c语言概述"><a class="markdownIt-Anchor" href="#11-c语言概述"></a> 1.1 C语言概述</h1>
@@ -8987,73 +8987,6 @@ ul{text-align:left}
 <p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/21441195/1675755620298-50919175-d652-4ebd-8de4-595aa718cce8.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_27%2Ctext_6buR6ams56iL5bqP5ZGY%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10" alt="07.png" /></p>
 <p>3可通过搜索框搜索到stc相关芯片信息</p>
 <p><img src= "/img/loading.gif" data-lazy-src="https://cdn.nlark.com/yuque/0/2023/png/21441195/1675755678580-6f04bea8-57d2-4085-bf42-ffaaab04e6ed.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_27%2Ctext_6buR6ams56iL5bqP5ZGY%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10" alt="08.png" /></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>C语言</title>
-    <url>/C%E8%AF%AD%E8%A8%80.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>C语言</strong></p>
-<p>C语言的应用极其广泛，从网站后台，到底层操作系统，从多媒体应用到大型网络游戏，均可使用C语言来开发。<br />
-●C语言可以写网站后台程序<br />
-●C语言可以专门针对某个主题写出功能强大的程序库<br />
-●C语言可以写出大型游戏的引擎<br />
-●C语言可以写出另一个语言来<br />
-●C语言可以写操作系统和驱动程序，几乎都能用C语言编写<br />
-●任何设备只要配置了微处理器，几乎都支持C语言</p>
-<p>配套单词表：<a href="https://doc.weixin.qq.com/sheet/e3_AHcA_gZbAKcOPyccs4xRsuxOrwI10">https://doc.weixin.qq.com/sheet/e3_AHcA_gZbAKcOPyccs4xRsuxOrwI10</a></p>
-<p>\1. C语言前言</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/gb5opg8w5ysv63i3">1.1 C语言概述06-27 09:57</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/pt7xkqohhoptsgez">1.2 编程环境06-15 19:21</a></p>
-<p>\2. 基础语法</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/ilbpv8qtulhvo4bx">2.1 第一个C语言程序：HelloWorld06-15 19:21</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/op1g4v06982agf05">2.2 数据类型06-27 14:19</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/yqwtxhpczsiz5cat">2.3 数值表示06-27 14:21</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/yd9wny0x3reqadw0">2.4 输出和输入06-15 19:21</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/gq9qegcvfn70e5h1">2.5 运算符06-27 16:33</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/px7cnggzh2dp1hk8">2.6 类型转换06-27 16:39</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/px7cnggzh2dp1hk8">https://www.yuque.com/icheima/cprogram/px7cnggzh2dp1hk8</a>)</p>
-<p>\3. 控制语句</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/ad18dfocrxm7ng9o">3.1 程序执行的三大流程06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/ygec1agsxg7qv62a">3.2 分支语句06-30 11:20</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/hgvhqz73mq4y302g">3.3 循环语句06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/gvo08yrqma2xf9fi">3.4 跳转关键字06-27 17:45</a></p>
-<p>\4. 函数</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/gm859nvrz26p4ea2">4.1 概述06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/hpurfc9ihrbg7h9c">4.2 函数的使用06-28 21:16</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/el5xb73zcgo176vl">4.3 局部和全局变量06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/hf4vwxi5qgzgm2og">4.4 多文件编程06-15 19:22</a></p>
-<p>\5. 指针</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/wocor38rkxbkoyq9">5.1 指针基本语法06-29 17:32</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/wuu03nb0mnqeoe1h">5.2 指针和函数06-15 19:22</a></p>
-<p>\5. 指针</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/wocor38rkxbkoyq9">5.1 指针基本语法06-29 17:32</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/wuu03nb0mnqeoe1h">5.2 指针和函数06-15 19:22</a></p>
-<p>\6. 数组</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/btwp26gdppgaowdf">6.1 数组基本语法06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/rgu83hxfy9gulgpc">6.2 数组案例06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/hzopmqfsiaenzfbn">6.3 数组和指针06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/rvkuswmga7evrg1a">6.4 字符数组与字符串06-30 19:52</a></p>
-<p>\7. 复合类型(自定义类型)</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/uyhmsrzu39b4q50l">7.1 结构体06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/du9icl4m3oqmehlu">7.2 共用体(联合体)06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/ogcccxh5qr2qecgx">7.3 枚举06-15 19:22</a></p>
-<p>\8. 内存管理</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/fsuabicglgk6tl14">8.1 内存分布06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/rleu5g97dqbosnwo">8.2 堆区内存的使用06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/uq0go5z3rl9ih88k">8.3 内存分布代码分析06-15 19:22</a></p>
-<p>\9. 综合案例</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/ugocvg6y81dqa7kq">9.1 学生信息管理系统07-02 10:47</a></p>
-<p>\10. 配套练习</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/okywuz1pyikggvdg">第01天练习06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/fr5nfxgopwhirlk5">第02天练习06-15 19:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/tge5asvv2bh9sgpq">第03天练习07-01 18:12</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/zc2pn4dtebcta7vs">第04天练习06-15 19:22</a></p>
-<p>\11. 代码步骤</p>
-<p><a href="https://www.yuque.com/icheima/cprogram/ov4fde06tf8gvxth">第01天06-29 17:22</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/kb3n6652sa6qgx8x">第02天06-28 20:57</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/fq9m5gmzf8ukwvbr">第03天06-29 17:32</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/xx0raagvxdzqo2d8">第04天07-02 10:10</a></p>
-<p><a href="https://www.yuque.com/icheima/cprogram/va3dfhdpdfkkn300">第05天07-02 10:41</a></p>
 ]]></content>
   </entry>
   <entry>
