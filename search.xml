@@ -1,6 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>GD32总结</title>
+    <url>/513e347f.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="项目模板搭建"><a class="markdownIt-Anchor" href="#项目模板搭建"></a> 项目模板搭建</h2>
+<h3 id="工程文件目录创建"><a class="markdownIt-Anchor" href="#工程文件目录创建"></a> 工程文件目录创建</h3>
+<ul>
+<li>Project:放工程文件，编译文件等。</li>
+<li>Firmware：放 ARM 内核文件，标准外设库文件等。</li>
+<li>Hardware：放开发板的硬件驱动文件。</li>
+<li>User：放 main 函数，gd32f4xx_it 文件，systick 文件。</li>
+<li>Doc: 放 readme.txt 文件，工程说明文件。</li>
+</ul>
+<h3 id="keil分组创建"><a class="markdownIt-Anchor" href="#keil分组创建"></a> keil分组创建</h3>
+<p>新建分组：</p>
+<ul>
+<li>User</li>
+<li>CMSIS</li>
+<li>Firmware</li>
+<li>Hardware</li>
+<li>Doc</li>
+</ul>
+<h3 id="gd32"><a class="markdownIt-Anchor" href="#gd32"></a> GD32</h3>
+<h4 id="固件库移植"><a class="markdownIt-Anchor" href="#固件库移植"></a> 固件库移植</h4>
+<p>找到固件库的下载目录，<code>GD32F4xx_Firmware_Library_V3.0.4\GD32F4xx_Firmware_Library\Firmware</code> 文件夹下的内容全部拷贝到新建目录的Firmware 下</p>
+<h4 id="程序入口移植"><a class="markdownIt-Anchor" href="#程序入口移植"></a> 程序入口移植</h4>
+<p>找到我们的固件库的下载目录，将<code>GD32F4xx_Firmware_Library_V3.0.4\Template</code>中的文件进行拷贝到工程目录的<code>User</code>目录中</p>
+<h4 id="cmsis分组添加"><a class="markdownIt-Anchor" href="#cmsis分组添加"></a> CMSIS分组添加</h4>
+<ul>
+<li>来到<code>Firmware\CMSIS\GD\GD32F4xx\Source</code>目录下，选择<code>system_gd32f4xx.c</code></li>
+<li>来到<code>Firmware\CMSIS\GD\GD32F4xx\Source\ARM</code>目录下，选择<code>startuo_gd32f450_470.s</code></li>
+</ul>
+<h4 id="firmware分组添加"><a class="markdownIt-Anchor" href="#firmware分组添加"></a> Firmware分组添加</h4>
+<p>来到<code>Firmware\GD32F4xx_standard_peripheral\Source</code>目录下，选择如下：</p>
+<ul>
+<li>gd32f4xx_rcu.c</li>
+<li>gd32f4xx_gpio.c</li>
+<li>gd32f4xx_misc.c</li>
+</ul>
+<h4 id="工程配置"><a class="markdownIt-Anchor" href="#工程配置"></a> 工程配置</h4>
+<ol>
+<li>Target配置<br />
+点击魔法棒，进入配置中的Target，选择ARM compiler 为V6<br />
+勾选Use MicroLIB</li>
+<li>Output配置<br />
+选择创建hex文件</li>
+<li>C/C++配置
+<ul>
+<li>Define配置为：<code>USE_STDPERIPH_DRIVER,GD32F470</code></li>
+<li>Warings选择AC5-like warnings</li>
+<li>选择c99和c++03</li>
+<li>Optimization选择-O1</li>
+</ul>
+</li>
+<li>Include配置<br />
+添加如下几个目录：
+<ul>
+<li>User</li>
+<li>Firmware\CMSIS\GD\GD32F4xx\Include</li>
+<li>Firmware\CMSIS</li>
+<li>Firmware\GD32F4xx_standard_peripheral\Include</li>
+</ul>
+</li>
+</ol>
+<h4 id="程序代码修改"><a class="markdownIt-Anchor" href="#程序代码修改"></a> 程序代码修改</h4>
+<ul>
+<li>
+<p>打开 main.c 文件，删除一些不必要的代码</p>
+</li>
+<li>
+<p>打开 gd32f4xx_it.c 文件，拉到最后面，然后删掉 Systick_Handler 下面的代码</p>
+</li>
+</ul>
+<h3 id="stm32"><a class="markdownIt-Anchor" href="#stm32"></a> STM32</h3>
+<h4 id="固件库移植-2"><a class="markdownIt-Anchor" href="#固件库移植-2"></a> 固件库移植</h4>
+<p>找到我们的固件库的下载目录，将    <code>STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries</code> 文件夹下的内容全部拷贝到新建目录的Firmware 下</p>
+<h4 id="程序入口移植-2"><a class="markdownIt-Anchor" href="#程序入口移植-2"></a> 程序入口移植</h4>
+<p>找到我们的固件库的下载目录，将STM32F4xx_DSP_StdPeriph_Lib_V1.9.0/Project/STM32F4xx_StdPeriph_Templates中的.c.h文件拷贝到工程目录<code>User</code>目录中</p>
+<h4 id="cmsis分组添加-2"><a class="markdownIt-Anchor" href="#cmsis分组添加-2"></a> CMSIS分组添加</h4>
+<p>来到<code>Firmware\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm</code>目录下，选择startup_stm32f40_41xxx.s</p>
+<h4 id="firmware分组添加-2"><a class="markdownIt-Anchor" href="#firmware分组添加-2"></a> Firmware分组添加</h4>
+<p>来到<code>Firmware\STM32F4xx_StdPeriph_Driver\src</code>目录下，选择如下：</p>
+<ul>
+<li>stm32f4xx_rcc.c</li>
+<li>stm32f4xx_gpio.c</li>
+<li>misc.c</li>
+</ul>
+<h4 id="程序代码修改-2"><a class="markdownIt-Anchor" href="#程序代码修改-2"></a> 程序代码修改</h4>
+<ul>
+<li>打开 main.c 文件，删除一些不必要的代码</li>
+<li>打开 stm32f4xx_it.c 文件，拉到最后面，然后删掉 Systick_Handler 下面的代码</li>
+</ul>
+<h4 id="工程配置-2"><a class="markdownIt-Anchor" href="#工程配置-2"></a> 工程配置</h4>
+<ol>
+<li>
+<p>Target配置<br />
+点击魔法棒，进入配置中的<code>Target</code>，选择ARM compiler 为V6<br />
+勾选<code>Use MicroLIB</code></p>
+</li>
+<li>
+<p>Output配置<br />
+选择创建hex文件</p>
+</li>
+<li>
+<p>C/C++配置</p>
+<ul>
+<li>Define配置为：USE_STDPERIPH_DRIVER,STM32F40_41xxx</li>
+<li>Warings选择AC5-like warnings</li>
+<li>选择c99和c++03</li>
+<li>Optimization选择-O1</li>
+</ul>
+</li>
+<li>
+<p>Include配置</p>
+</li>
+</ol>
+<p>添加如下几个目录：</p>
+<ul>
+<li>User</li>
+<li>Firmware\CMSIS\Device\ST\STM32F4xx\Include</li>
+<li>Firmware\CMSIS\Include</li>
+<li>Firmware\STM32F4xx_StdPeriph_Driver\inc</li>
+</ul>
+<h4 id="编译错误"><a class="markdownIt-Anchor" href="#编译错误"></a> 编译错误</h4>
+<p>通常在编译过程中会报错，是由于当前CMSIS接口定义不符合AC6的编译环境，我们需要覆盖掉CMISIS的编译头文件。<br />
+首先，删除<code>Firmware\CMSIS\Include</code>中所有的头文件。<br />
+然后，找到你的Pack安装目录，查找方式如下：</p>
+<ol>
+<li>点击Pack install</li>
+<li>查看窗口上方路径</li>
+</ol>
+<p>来到这个目录中的<code>Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include</code>中,<br />
+拷贝这个目录中所有的.h文件，拷贝到你的项目目录的<code>Firmware/CMSIS/Include</code>目录中</p>
+<h2 id="初始化模板代码"><a class="markdownIt-Anchor" href="#初始化模板代码"></a> 初始化模板代码</h2>
+<h3 id="gpio"><a class="markdownIt-Anchor" href="#gpio"></a> GPIO</h3>
+<h4 id="输出初始化"><a class="markdownIt-Anchor" href="#输出初始化"></a> 输出初始化</h4>
+<h5 id="推挽输出"><a class="markdownIt-Anchor" href="#推挽输出"></a> 推挽输出</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">rcu_periph_clock_enable(RCU_GPIOx);</span><br><span class="line">gpio_mode_set(GPIOx, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_x);</span><br><span class="line">gpio_output_options_set(GPIOx, GPIO_OTYPE_PP, GPIO_OSPEED_MAX, GPIO_PIN_x);</span><br></pre></td></tr></table></figure>
+<h5 id="开漏输出"><a class="markdownIt-Anchor" href="#开漏输出"></a> 开漏输出</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">rcu_periph_clock_enable(RCU_GPIOx);</span><br><span class="line">gpio_mode_set(GPIOx, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_x);</span><br><span class="line">gpio_output_options_set(GPIOx, GPIO_OTYPE_OD, GPIO_OSPEED_MAX, GPIO_PIN_x);</span><br></pre></td></tr></table></figure>
+<h5 id="开漏上拉输出"><a class="markdownIt-Anchor" href="#开漏上拉输出"></a> 开漏上拉输出</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">rcu_periph_clock_enable(RCU_GPIOx);</span><br><span class="line">gpio_mode_set(GPIOx, GPIO_MODE_OUTPUT, GPIO_PUPD_PULLUP, GPIO_PIN_x);</span><br><span class="line">gpio_output_options_set(GPIOx, GPIO_OTYPE_OD, GPIO_OSPEED_MAX, GPIO_PIN_x);</span><br></pre></td></tr></table></figure>
+<h4 id="输入初始化"><a class="markdownIt-Anchor" href="#输入初始化"></a> 输入初始化</h4>
+<h5 id="浮空输入"><a class="markdownIt-Anchor" href="#浮空输入"></a> 浮空输入</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">rcu_periph_clock_enable(RCU_GPIOx);</span><br><span class="line">gpio_mode_set(GPIOx, GPIO_MODE_INPUT, GPIO_PUPD_NONE, GPIO_PIN_x);</span><br></pre></td></tr></table></figure>
+<h5 id="上拉输入"><a class="markdownIt-Anchor" href="#上拉输入"></a> 上拉输入</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">rcu_periph_clock_enable(RCU_GPIOx);</span><br><span class="line">gpio_mode_set(GPIOx, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP, GPIO_PIN_x);</span><br></pre></td></tr></table></figure>
+<h5 id="下拉输入"><a class="markdownIt-Anchor" href="#下拉输入"></a> 下拉输入</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">rcu_periph_clock_enable(RCU_GPIOx);</span><br><span class="line">gpio_mode_set(GPIOx, GPIO_MODE_INPUT, GPIO_PUPD_PULLDOWN, GPIO_PIN_x);</span><br></pre></td></tr></table></figure>
+<h4 id="输出电平"><a class="markdownIt-Anchor" href="#输出电平"></a> 输出电平</h4>
+<h5 id="高电平"><a class="markdownIt-Anchor" href="#高电平"></a> 高电平</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">gpio_bit_set(GPIOx, GPIO_PIN_x);</span><br></pre></td></tr></table></figure>
+<h5 id="低电平"><a class="markdownIt-Anchor" href="#低电平"></a> 低电平</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">gpio_bit_reset(GPIOx, GPIO_PIN_x);</span><br></pre></td></tr></table></figure>
+<h5 id="高低电平"><a class="markdownIt-Anchor" href="#高低电平"></a> 高低电平</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">gpio_bit_write(GPIOx, GPIO_PIN_x, SET <span class="keyword">or</span> RESET);</span><br></pre></td></tr></table></figure>
+<h5 id="toggle操作"><a class="markdownIt-Anchor" href="#toggle操作"></a> Toggle操作</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">gpio_bit_toggle(GPIOx, GPIO_PIN_x);</span><br></pre></td></tr></table></figure>
+<h5 id="输入电平读取"><a class="markdownIt-Anchor" href="#输入电平读取"></a> 输入电平读取</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">FlagStatus state = gpio_input_bit_get(GPIOx, GPIO_PIN_x);</span><br></pre></td></tr></table></figure>
+<h3 id="串口"><a class="markdownIt-Anchor" href="#串口"></a> 串口</h3>
+<h4 id="串口初始化"><a class="markdownIt-Anchor" href="#串口初始化"></a> 串口初始化</h4>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 哪个串口</span></span><br><span class="line"><span class="keyword">uint32_t</span> usartx = USART0;</span><br><span class="line"><span class="keyword">uint32_t</span> usartx_rcu = RCU_USART0;</span><br><span class="line"><span class="keyword">uint32_t</span> usartx_irq = USART0_IRQn;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 波特率</span></span><br><span class="line"><span class="keyword">uint32_t</span> usartx_p_baudrate = <span class="number">115200</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// tx和rx，用了哪个引脚</span></span><br><span class="line"><span class="keyword">uint32_t</span> usartx_tx_port_rcu = RCU_GPIOA;</span><br><span class="line"><span class="keyword">uint32_t</span> usartx_tx_port = GPIOA;</span><br><span class="line"><span class="keyword">uint32_t</span> usartx_tx_pin = GPIO_PIN_9;</span><br><span class="line"><span class="comment">// 复用功能编号</span></span><br><span class="line"><span class="keyword">uint32_t</span> usartx_tx_af = GPIO_AF_7;</span><br><span class="line"></span><br><span class="line"><span class="comment">// tx和rx，用了哪个引脚</span></span><br><span class="line"><span class="keyword">uint32_t</span> usartx_rx_port_rcu = RCU_GPIOA;</span><br><span class="line"><span class="keyword">uint32_t</span> usartx_rx_port = GPIOA;</span><br><span class="line"><span class="keyword">uint32_t</span> usartx_rx_pin = GPIO_PIN_10;</span><br><span class="line"><span class="comment">// 复用功能编号</span></span><br><span class="line"><span class="keyword">uint32_t</span> usartx_rx_af = GPIO_AF_7;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*************** gpio *****************/</span></span><br><span class="line"><span class="comment">// TX</span></span><br><span class="line"><span class="comment">// 配置时钟</span></span><br><span class="line">rcu_periph_clock_enable(usartx_tx_port_rcu);</span><br><span class="line"><span class="comment">// 配置模式: 复用功能</span></span><br><span class="line">gpio_mode_set(usartx_tx_port, GPIO_MODE_AF, GPIO_PUPD_NONE, usartx_tx_pin);</span><br><span class="line"><span class="comment">// 配置复用功能</span></span><br><span class="line">gpio_af_set(usartx_tx_port, usartx_tx_af, usartx_tx_pin);</span><br><span class="line">gpio_output_options_set(usartx_tx_port, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, usartx_tx_pin);</span><br><span class="line"></span><br><span class="line"><span class="comment">// RX</span></span><br><span class="line"><span class="comment">// 配置时钟</span></span><br><span class="line">rcu_periph_clock_enable(usartx_rx_port_rcu);</span><br><span class="line">gpio_mode_set(usartx_rx_port, GPIO_MODE_AF, GPIO_PUPD_NONE, usartx_rx_pin);</span><br><span class="line">gpio_af_set(usartx_rx_port, usartx_rx_af, usartx_rx_pin);</span><br><span class="line"><span class="comment">// 配置输出参数</span></span><br><span class="line">gpio_output_options_set(usartx_rx_port, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, usartx_rx_pin);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*************** usart ****************/</span></span><br><span class="line"><span class="comment">// 串口时钟</span></span><br><span class="line">rcu_periph_clock_enable(usartx_rcu);</span><br><span class="line"><span class="comment">// USART复位</span></span><br><span class="line">usart_deinit(usartx);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 波特率</span></span><br><span class="line">usart_baudrate_set(usartx, usartx_p_baudrate);</span><br><span class="line"><span class="comment">// 校验位</span></span><br><span class="line">usart_parity_config(usartx, USART_PM_NONE);</span><br><span class="line"><span class="comment">// 数据位数</span></span><br><span class="line">usart_word_length_set(usartx, USART_WL_8BIT);</span><br><span class="line"><span class="comment">// 停止位</span></span><br><span class="line">usart_stop_bit_set(usartx, USART_STB_1BIT);</span><br><span class="line"><span class="comment">// 先发送高位还是低位</span></span><br><span class="line">usart_data_first_config(usartx, USART_MSBF_LSB);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 发送功能配置</span></span><br><span class="line">usart_transmit_config(usartx, USART_TRANSMIT_ENABLE);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 接收功能配置</span></span><br><span class="line">usart_receive_config(usartx, USART_RECEIVE_ENABLE);</span><br><span class="line"><span class="comment">// 接收中断配置</span></span><br><span class="line">nvic_irq_enable(usartx_irq, <span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line"><span class="comment">// usart int rbne</span></span><br><span class="line">usart_interrupt_enable(usartx, USART_INT_RBNE);</span><br><span class="line">usart_interrupt_enable(usartx, USART_INT_IDLE);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使能串口</span></span><br><span class="line">usart_enable(usartx);</span><br></pre></td></tr></table></figure>
+<h4 id="串口发送字节"><a class="markdownIt-Anchor" href="#串口发送字节"></a> 串口发送字节</h4>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">send_byte</span><span class="params">(<span class="keyword">uint8_t</span> data)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//通过USART发送</span></span><br><span class="line">    usart_data_transmit(USART0, data);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//判断缓冲区是否已经空了</span></span><br><span class="line">    <span class="comment">//FlagStatus state = usart_flag_get(USART_NUM,USART_FLAG_TBE);</span></span><br><span class="line">    <span class="keyword">while</span>(RESET == usart_flag_get(USART0, USART_FLAG_TBE));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="发送字符串"><a class="markdownIt-Anchor" href="#发送字符串"></a> 发送字符串</h4>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">send_string</span><span class="params">(<span class="keyword">char</span>* data)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(data &amp;&amp; *data)&#123;</span><br><span class="line">        send_byte((<span class="keyword">uint8_t</span>)(*data));</span><br><span class="line">        data++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="配置printf"><a class="markdownIt-Anchor" href="#配置printf"></a> 配置Printf</h4>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fputc</span><span class="params">(<span class="keyword">int</span> ch, FILE *f)</span></span>&#123;</span><br><span class="line">	send_byte((<span class="keyword">uint8_t</span>)ch);</span><br><span class="line">	<span class="keyword">return</span> ch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="中断接收"><a class="markdownIt-Anchor" href="#中断接收"></a> 中断接收</h4>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> USART_RECEIVE_LENGTH  1024</span></span><br><span class="line"><span class="comment">//串口接收缓冲区大小</span></span><br><span class="line"><span class="keyword">uint8_t</span> g_recv_buff[USART_RECEIVE_LENGTH];   <span class="comment">// 接收缓冲区</span></span><br><span class="line"><span class="comment">//接收到字符存放的位置</span></span><br><span class="line"><span class="keyword">uint32_t</span> g_recv_length = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">USART0_IRQHandler</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ((usart_interrupt_flag_get(USART0, USART_INT_FLAG_RBNE)) == SET) &#123;</span><br><span class="line">        <span class="keyword">uint16_t</span> value = usart_data_receive(USART0);</span><br><span class="line">        g_recv_buff[g_recv_length] = value;		</span><br><span class="line">        g_recv_length++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (usart_interrupt_flag_get(USART0, USART_INT_FLAG_IDLE) == SET) &#123;</span><br><span class="line">        <span class="comment">//读取缓冲区,清空缓冲区</span></span><br><span class="line">        usart_data_receive(USART0);</span><br><span class="line">        g_recv_buff[g_recv_length] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// <span class="doctag">TODO:</span> g_recv_buff为接收的数据，g_recv_length为接收的长度</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;recv: %s\r\n&quot;</span>, g_recv_buff);</span><br><span class="line"></span><br><span class="line">        g_recv_length = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="外部中断"><a class="markdownIt-Anchor" href="#外部中断"></a> 外部中断</h3>
+<h4 id="硬件中断"><a class="markdownIt-Anchor" href="#硬件中断"></a> 硬件中断</h4>
+<h5 id="初始化"><a class="markdownIt-Anchor" href="#初始化"></a> 初始化</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">EXTI_config</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">uint32_t</span> extix = EXTI_0;</span><br><span class="line">    <span class="keyword">uint32_t</span> extix_irq = EXTI0_IRQn;</span><br><span class="line">    <span class="keyword">uint32_t</span> extix_irq_pre = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">uint32_t</span> extix_irq_sub = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">uint32_t</span> extix_trig = EXTI_TRIG_BOTH;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">uint32_t</span> extix_port = GPIOA;</span><br><span class="line">    <span class="keyword">uint32_t</span> extix_pin = GPIO_PIN_0;</span><br><span class="line">    <span class="keyword">uint32_t</span> extix_src_port = EXTI_SOURCE_GPIOA;</span><br><span class="line">    <span class="keyword">uint32_t</span> extix_src_pin = EXTI_SOURCE_PIN0;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*************** gpio ****************/</span></span><br><span class="line">    <span class="comment">// PA0,</span></span><br><span class="line">    <span class="comment">// 时钟初始化</span></span><br><span class="line">    rcu_periph_clock_enable(RCU_GPIOA);</span><br><span class="line">    <span class="comment">// 配置GPIO模式</span></span><br><span class="line">    gpio_mode_set(extix_port, GPIO_MODE_INPUT, GPIO_PUPD_NONE, extix_pin);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*************** exti ****************/</span></span><br><span class="line">    <span class="comment">// 时钟配置</span></span><br><span class="line">    rcu_periph_clock_enable(RCU_SYSCFG);</span><br><span class="line">    <span class="comment">// 配置中断源</span></span><br><span class="line">    syscfg_exti_line_config(extix_src_port, extix_src_pin);</span><br><span class="line">    <span class="comment">// 中断初始化</span></span><br><span class="line">    exti_init(extix, EXTI_INTERRUPT, extix_trig);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 配置中断优先级</span></span><br><span class="line">    nvic_irq_enable(extix_irq, extix_irq_pre, extix_irq_sub);</span><br><span class="line">    <span class="comment">// 使能中断</span></span><br><span class="line">    exti_interrupt_enable(extix);</span><br><span class="line">    <span class="comment">// 清除中断标志位</span></span><br><span class="line">    exti_interrupt_flag_clear(extix);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="中断函数"><a class="markdownIt-Anchor" href="#中断函数"></a> 中断函数</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">EXTI</span><span class="params">(xxxx)</span>_<span class="title">IRQHandler</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 判断寄存器状态</span></span><br><span class="line">    <span class="keyword">if</span>(SET == exti_interrupt_flag_get(EXTI_x)) &#123;</span><br><span class="line">        <span class="comment">// <span class="doctag">TODO:</span> </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 清除中断标志位</span></span><br><span class="line">    exti_interrupt_flag_clear(EXTI_x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="软件中断"><a class="markdownIt-Anchor" href="#软件中断"></a> 软件中断</h4>
+<h5 id="初始化-2"><a class="markdownIt-Anchor" href="#初始化-2"></a> 初始化</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">EXTI_config</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">uint32_t</span> extix = EXTI_0;</span><br><span class="line">    <span class="keyword">uint32_t</span> extix_irq = EXTI0_IRQn;</span><br><span class="line">    <span class="keyword">uint32_t</span> extix_irq_pre = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">uint32_t</span> extix_irq_sub = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*************** exti ****************/</span></span><br><span class="line">    <span class="comment">// 时钟配置</span></span><br><span class="line">    rcu_periph_clock_enable(RCU_SYSCFG);</span><br><span class="line">    <span class="comment">// 中断初始化</span></span><br><span class="line">    exti_init(extix, EXTI_INTERRUPT, EXTI_TRIG_NONE);</span><br><span class="line">    <span class="comment">// 配置中断优先级</span></span><br><span class="line">    nvic_irq_enable(extix_irq, extix_irq_pre, extix_irq_sub);</span><br><span class="line">    <span class="comment">// 使能中断</span></span><br><span class="line">    exti_interrupt_enable(extix);</span><br><span class="line">    <span class="comment">// 清除中断标志位</span></span><br><span class="line">    exti_interrupt_flag_clear(extix);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="中断函数-2"><a class="markdownIt-Anchor" href="#中断函数-2"></a> 中断函数</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">EXTI</span><span class="params">(xxxx)</span>_<span class="title">IRQHandler</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 判断寄存器状态</span></span><br><span class="line">    <span class="keyword">if</span>(SET == exti_interrupt_flag_get(EXTI_x)) &#123;</span><br><span class="line">        <span class="comment">// <span class="doctag">TODO:</span> </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 清除中断标志位</span></span><br><span class="line">    exti_interrupt_flag_clear(EXTI_x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="触发中断"><a class="markdownIt-Anchor" href="#触发中断"></a> 触发中断</h5>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">exti_software_interrupt_enable(EXTI_x);</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
     <title>MySQL基础</title>
     <url>/bce68613.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="mysql常见命令"><a class="markdownIt-Anchor" href="#mysql常见命令"></a> MySQL常见命令</h1>
@@ -641,11 +825,6 @@ Alt+F4：关闭</p>
 <figure class="highlight vala"><table><tr><td class="code"><pre><span class="line"><span class="meta"># 盘符切换 磁盘名称:</span></span><br><span class="line"><span class="meta"># 查看当前目录下所有文件 dir</span></span><br><span class="line"><span class="meta"># 切换目录 cd /d 地址 #跨磁盘</span></span><br><span class="line">cd .. # 返回上一级目录</span><br><span class="line"><span class="meta"># 清理屏幕 cls</span></span><br><span class="line"><span class="meta"># 退出终端 exit</span></span><br><span class="line"><span class="meta"># 查看ip ipconfig</span></span><br><span class="line"><span class="meta"># 打开应用 </span></span><br><span class="line">calc #计算器</span><br><span class="line">mspaint #画图</span><br><span class="line">notepad #记事本</span><br><span class="line"><span class="meta"># ping 命令</span></span><br><span class="line"><span class="meta"># 创建文件夹 md 文件夹名称</span></span><br><span class="line"><span class="meta"># 创建文件 cd&gt;文件名</span></span><br><span class="line"><span class="meta"># 删除文件 del 文件名</span></span><br><span class="line"><span class="meta"># 删除文件夹 rd 文件夹名</span></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
-    <title>快排的实现</title>
-    <url>/afe35157.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-  </entry>
-  <entry>
     <title>概率论公式</title>
     <url>/8a707098.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="常用概率分布及其数学期望和方差"><a class="markdownIt-Anchor" href="#常用概率分布及其数学期望和方差"></a> 常用概率分布及其数学期望和方差</h3>
@@ -871,137 +1050,6 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 <h2 id="腾讯云ai能力"><a class="markdownIt-Anchor" href="#腾讯云ai能力"></a> 腾讯云AI能力</h2>
 <h2 id="人工智能的发展趋势和行业地位"><a class="markdownIt-Anchor" href="#人工智能的发展趋势和行业地位"></a> 人工智能的发展趋势和行业地位</h2>
 ]]></content>
-  </entry>
-  <entry>
-    <title>树莓派内网穿透实现远程访问</title>
-    <url>/92270b23.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h3>
-<p>最近入手了一块raspberry 3b+，想要随时随地访问树莓派需要配置内网穿透。我最初找了一些这方便的文章，根据步骤配置，效果不怎么样。然后用了花生壳，体验也不好。后来发现一款强大的免费内网穿透软件，比起付费软件毫不逊色。</p>
-<h3 id="配置方案"><a class="markdownIt-Anchor" href="#配置方案"></a> 配置方案</h3>
-<h4 id="注册sakura-frp账号"><a class="markdownIt-Anchor" href="#注册sakura-frp账号"></a> 注册Sakura frp账号</h4>
-<p>百度<a href="https://www.natfrp.com/">Sakura</a>，第一个就是官网，长这样<br />
-<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/11/30/r4tijkQRsA2HC9z.png" alt="image.png" /><br />
-点击注册,按照提示填写资料。<br />
-<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/11/30/ZaTcFfkCz3neRdM.png" alt="image.png" /><br />
-注册完成后进入管理面板，记住访问密匙，后面会用到。<br />
-<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/11/30/Mh5quw9TEni4OjR.png" alt="image.png" /></p>
-<h4 id="确认系统架构"><a class="markdownIt-Anchor" href="#确认系统架构"></a> 确认系统架构</h4>
-<p>树莓派官方系统的系统架构是arm，如果使用的其它系统，执行下面命令，根据输出结果确定系统架构</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ uname -a</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">架构</th>
-<th style="text-align:center">输出结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">i386</td>
-<td style="text-align:center">i386, i686</td>
-</tr>
-<tr>
-<td style="text-align:center">amd64</td>
-<td style="text-align:center">x86_64</td>
-</tr>
-<tr>
-<td style="text-align:center">arm</td>
-<td style="text-align:center">arm, armv7l</td>
-</tr>
-<tr>
-<td style="text-align:center">arm64</td>
-<td style="text-align:center">aarch64, armv8l</td>
-</tr>
-<tr>
-<td style="text-align:center">mips</td>
-<td style="text-align:center">mips</td>
-</tr>
-<tr>
-<td style="text-align:center">mips64</td>
-<td style="text-align:center">mips64</td>
-</tr>
-<tr>
-<td style="text-align:center">不支持</td>
-<td style="text-align:center">alpha, arc, blackfin, c6x, cris, frv, h8300, hexagon, ia64, m32r, m68k, metag, microblaze, mn10300, nios2, openrisc, parisc, parisc64, ppc, ppcle, ppc64, ppc64le, s390, s390x, score, sh, sh64, sparc, sparc64, tile, unicore32, xtensa</td>
-</tr>
-</tbody>
-</table>
-<p>如果您的输出结果不在上面列表中，可以通过[百度](<a href="https://www.baidu.com/%E8%BF%9B%E8%A1%8C%E6%90%9C%E7%B4%A2">https://www.baidu.com/进行搜索</a></p>
-<h4 id="安装frpc"><a class="markdownIt-Anchor" href="#安装frpc"></a> 安装frpc</h4>
-<p>登录<a href="https://www.natfrp.com/">管理面板</a>，在侧边栏点击 “软件下载” :<br />
-根据系统架构复制相应的下载地址<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-1.png" alt="image.png" /><br />
-使用下面的命令进入<code>/usr/local/bin</code>目录并下载文件</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> curl -Lo frpc 您刚才复制的下载地址</span></span><br></pre></td></tr></table></figure>
-<p><img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-2.png" alt="image.png" /></p>
-<p>然后使用下面的命令设置正确的权限并检查输出</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># chmod 755 frpc</span></span><br><span class="line"><span class="comment"># ls -ls frpc</span></span><br></pre></td></tr></table></figure>
-<p><img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-3.png" alt="image.png" /><br />
-如果您看到和图里一样的输出，frpc 就安装完成并可以正常使用了。您可以执行下面的命令来再次确认</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ frpc -v</span><br></pre></td></tr></table></figure>
-<h4 id="配置开机自启后台运行"><a class="markdownIt-Anchor" href="#配置开机自启后台运行"></a> 配置开机自启/后台运行</h4>
-<p>让<code>frpc</code>在开机时自启或在后台运行，可以让你在任何地方连接树莓派，这需要将<code>frpc</code>注册为系统服务</p>
-<p>首先，您要搞清楚您的<code>Linux</code>系统使用的 初始化系统 是什么，官方文档提供三种常见初始化系统的配置指南:</p>
-<ul>
-<li><a href="https://doc.natfrp.com/#/frpc/service/systemd">Systemd</a></li>
-<li><a href="https://doc.natfrp.com/#/frpc/service/upstart">Upstart</a></li>
-<li><a href="https://doc.natfrp.com/#/frpc/service/sysvinit">SysV-Init</a></li>
-</ul>
-<p>执行下面的命令然后查看输出，确定您的初始化系统</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if [[ `/sbin/init --version` =~ upstart ]]; then echo Upstart; elif [[ `systemctl` =~ -\.mount ]]; then echo Systemd; elif [[ -f /etc/init.d/cron &amp;&amp; ! -h /etc/init.d/cron ]]; then echo SysV-Init; else echo Unknown; fi</span></span><br></pre></td></tr></table></figure>
-<p><img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-4.png" alt="image.png" /></p>
-<p>目前官方文档上只有<code>Systemd</code>的配置指南，另外两个还没写好，本人目前用的是树莓派官方系统，初始化系统是<code>Systemd</code>，下面是<code>Systemd</code>配置<code>frpc</code>开机自启/后台运行的方法</p>
-<h5 id="编写配置文件"><a class="markdownIt-Anchor" href="#编写配置文件"></a> 编写配置文件</h5>
-<p><code>Systemd</code>的<code>Unit</code>配置文件 通常位于这些目录中:</p>
-<ul>
-<li>/lib/systemd/system</li>
-<li>/etc/systemd/system<br />
-本文选用第一个目录来放置<code>frpc</code>的<code>Unit</code>配置文件，并且<code>frpc</code>启用后报错退出时每分钟会自动重启一次<br />
-执行下面命令</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vi /lib/systemd/system/frpc@.service</span></span><br></pre></td></tr></table></figure>
-<p>其中<code>vi</code>是一个文本编辑器，可以换成其它的<br />
-输入下述内容</p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[Unit]</span></span><br><span class="line"><span class="attr">Description</span>=SakuraFrp Service</span><br><span class="line"><span class="attr">After</span>=network.target</span><br><span class="line"></span><br><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Type</span>=idle</span><br><span class="line"><span class="attr">User</span>=nobody</span><br><span class="line"><span class="attr">Restart</span>=<span class="literal">on</span>-failure</span><br><span class="line"><span class="attr">RestartSec</span>=<span class="number">60</span>s</span><br><span class="line"><span class="attr">ExecStart</span>=/usr/local/bin/frpc -f %i</span><br><span class="line"></span><br><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span>=multi-user.target</span><br></pre></td></tr></table></figure>
-<p>执行下面的命令重载<code>Systemd</code>，这样这样服务就配置完成了</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl daemon-reload</span></span><br></pre></td></tr></table></figure>
-<h5 id="配置开机自启"><a class="markdownIt-Anchor" href="#配置开机自启"></a> 配置开机自启</h5>
-<p>使用下面的命令启用/禁用服务，<code>enable</code>是启用，<code>disable</code>是禁用，操作完成后再用<code>status</code>检查一下状态</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl &lt;enable|disable&gt; &lt;Unit名称&gt;</span></span><br><span class="line"><span class="comment"># systemctl status &lt;Unit名称&gt;</span></span><br></pre></td></tr></table></figure>
-<p>如果一切正常，您会看到我图中的两个红色标注的内容</p>
-<blockquote>
-<p>没看到第一个创建符号链接的提示也是正常的，只要下面的状态显示为<code>enabled</code>就行<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/service/_images/systemd-4.png" alt="image.png" /></p>
-</blockquote>
-<h4 id="启动器的基本设置"><a class="markdownIt-Anchor" href="#启动器的基本设置"></a> 启动器的基本设置</h4>
-<p>登录<a href="https://www.natfrp.com/">管理面板</a>，点击侧边栏的“软件下载”，下载推荐版本，如果打不开再换下面的传统启动器<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-0.png" alt="image.png" /><br />
-下载完毕后解压，点击<code>SakuraLauncher.exe</code>运行启动器（如果下载的是传统启动器运行<code>LegacyLauncher.exe</code>）进入用户信息界面，复制访问密钥（也叫token）到启动器点击登录<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-3.png" alt="image.png" /><br />
-创建隧道或在官网创建隧道，隧道创建成功后可通过启动器启动隧道<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-7.png" alt="image.png" /><br />
-启动成功后右下角会弹出通知，提示隧道连接方式。该通知可以在设置中通过 关闭隧道状态提示 选项禁用<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-8.png" alt="image.png" /><br />
-转到日志标签可以复制连接方式<br />
-<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-9.png" alt="image" /></p>
-<h4 id="关于隧道"><a class="markdownIt-Anchor" href="#关于隧道"></a> 关于隧道</h4>
-<h5 id="启动停止隧道"><a class="markdownIt-Anchor" href="#启动停止隧道"></a> 启动/停止隧道</h5>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl &lt;start|stop&gt; &lt;Unit名称&gt;</span></span><br></pre></td></tr></table></figure>
-<p>使用上面命令启动/停止隧道，<code>start</code>是启动，<code>stop</code>是停止<br />
-其中&lt;Unit名称&gt;为&lt;你的Token&gt;:&lt;隧道ID&gt;[隧道ID[隧道ID…]]<br />
-如：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl start frpc@wdnmdtoken666666:12345</span></span><br></pre></td></tr></table></figure>
-<h5 id="查看隧道状态"><a class="markdownIt-Anchor" href="#查看隧道状态"></a> 查看隧道状态</h5>
-<p>可以通过下面命令查看特定隧道状态</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl status &lt;Unit名称&gt;</span></span><br></pre></td></tr></table></figure>
-<p>或者通过下面命令查看所有隧道状态</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl list-units frpc@*</span></span><br></pre></td></tr></table></figure>
-<h3 id="附录"><a class="markdownIt-Anchor" href="#附录"></a> 附录</h3>
-<p>参考：<a href="https://doc.natfrp.com/#/"><code>Sakura Frp</code>帮助文档</a></p>
-]]></content>
-      <tags>
-        <tag>raspberry</tag>
-      </tags>
   </entry>
   <entry>
     <title>腾讯云从业者认证课程笔记</title>
@@ -6471,42 +6519,134 @@ ul{text-align:left}
       </tags>
   </entry>
   <entry>
-    <title>speak</title>
-    <url>/fbf52663.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>根据埃里克森人格发展理论，人格中许多重要的部分，如安全感、存在感、自信心等，都在0-18岁的成长过程中逐渐成型。</p>
-<p>但由于原生家庭和成长环境等的影响，很多人往往都没能形成理想的人格，存在着这样那样的人格缺失：缺乏安全感、自卑、懒癌+拖延症、不愿承担责任、遇事没主见……</p>
-<p>不过，得益于人的心理和精神世界的极强的可塑性，每个人都有二次成长的机会，能够对已经定型的人格进行重塑。</p>
-<p>爱情不是一种与人的成熟度无关，只需要投入身心的感情。如果不努力发展自己的全部人格并以此达到一种创造倾向性，那么每种爱的试图都会失败，如果没有爱他人的能力，如果不能真正谦恭地、勇敢地、真诚地和有纪律地爱他人，那么人们在自己的爱情生活中永远得不到满足。</p>
-<p>同时他认为爱是一门可以学习的艺术，是一种能力，但是爱的能力并非单纯的技巧，必须与发展自己的人格紧密结合，它需要行动，需要付出，他说:<br />
-“不成熟的、幼稚的爱是:我爱你，因为我需要你”，而成熟的爱是:我需要你，因为我爱你。</p>
-<p>一、爱情不是一种与人的成熟度无关，只需要投入身心的感情。如果不努力发展自己的全部人格并以此达到一种创造倾向性，那么每种爱的试图都会失败，如果没有爱他人的能力，如果不能真正谦恭地、勇敢地、真诚地和有纪律地爱他人，那么人们在自己的爱情生活中永远得不到满足。<br />
-二、爱是一门艺术，要求想要掌握这门艺术的人有这方面的知识并付出努力（理论、实践、目标）。在这里，爱不仅仅是狭隘的男女爱情，也并非通过磨练增进技巧即可获得。爱是人格整体的展现，要发展爱的能力，就需要努力发展自己的人格，并朝着有益的目标迈进。<br />
-三、当今社会，爱情必然是罕见的现象，因为在一个以生产和消费为最高准则的社会，只有那些不甘心同流合污者才能做出有效的抵抗。人应该不再同自己的力量产生异化并且不再通过崇拜新偶像——国家、生产、消费的方式——去体验自己的力量，只有在这样一个社会，正如马克思所说，当个人的全面发展成为所有人的全面发展的条件时，爱情才会成为一种重要的社会态度。<br />
-四、爱情是人类生存问题的回答：<br />
-1、爱情的每一个理论必须要以人的理论，人的生存理论为前提。</p>
-<p>2、在爱中实现人和人之间的统一。克服孤独感，超越个人的天地，实现人类的大同。人们酗酒、吸毒、纵欲……来减轻孤独感，就像没有爱情的性交只能是一刹那的满足。</p>
-<p>3、爱情是一种积极的，而不是消极的情绪，是人内心生长的东西，而不是被俘虏的情绪，一般来说可以用另一种说法来表达，即爱情首先是给不是得。（1）给的最重要的范畴不是物质范畴，而是人与人之间的范畴。他可以把他拥有的最宝贵的东西，他的生命的一部分给予别人，把他内心有生命力的东西给予别人。他应该同别人分享他的欢乐、兴趣、理解力、知识、幽默和悲伤——简而言之一切在他身上有生命力的东西。通过他的给，他丰富了他人，同时在提高自己生命感的同时，他也提高了对方的生命感。对方都会因为唤醒了内心的某种生命力而充满快乐。没有生命力的爱情就是没有创造爱情的能力。（我们之间的成长，进步就是共同给于，就是生命力。）（2）爱情的积极性除了有给的要素外，还有关心、责任心、尊重（有能力实事求是地正视对方和认识他独有的个性）和认识（“认识你自己是心理学的渊源，心理学的最终结论就是爱。”）（3）爱情指克服人的孤寂和实现人和人的结合，还有一个更具有生物性的要求：那就是阴性和阳性的结合。（比如同性恋爱的变异是达不到两极结合所造成的，因此同性恋者永远不会摆脱孤独的折磨？？？，和不能不懂施爱的异性恋者一样，都实现不了两极的结合）</p>
-<p>五、天真的、孩童式的爱情遵循下列原则：“我爱，因为我被人爱。”成熟的爱的原则是：“我被人爱，因为我爱人。”不成熟的、幼稚的爱是：“我爱你，因为我需要你。”而成熟的爱是：“我需要你，因为我爱你。”<br />
-六、如果我确实爱一个人，那么我也爱其他人，我就会爱世界，爱生活。（其实这是性满足感的最佳状态。这里，作者不承认弗洛伊德的以性为中心的理论。）如果我能对一个人说：“我爱你”，我也应该说：“我在你身上爱所有的人，爱世界，也爱我自己。”（书中看到，作者深受《圣经》和马克思思想的影响）<br />
-七、爱的对象：博爱、母爱、性爱、自爱、神爱。性爱的一个重要因素，即意志的因素：爱一个人不仅是一种强烈的感情，而且也是一项决定，一种判断，一个诺言。缺乏自爱表明内心缺少生命力，并会使他感到空虚和失望。神爱对神的爱既不是从思想上了解神，也不是指自己爱神的思想，而是在爱的体验中体验自己同神的一致。<br />
-八、爱只能产生于这样两个人中间，这两个人都从他们生存的圈子里跳出来并相互结合，同时他们每个人都又能脱离自我中心去体验自己。只有这种“中心体验”才是人的现实，才是生活，才是爱情的基础。爱情是不断地挑战，不是避风港，而是一种共同努力、成长和劳动。如果两个人能从自己的生命的本质出发，体验到通过与自己的一致，与对方结成一体，而不是逃离自我，那么在这样的基本事实面前，就连和谐、冲突，欢乐和悲伤这样的东西也就只能退居第二位了。“爱情的存在只有一个证明，那就是对方联系的深度和每个所爱之人身上的活力和生命了。这也是我们所能看到的爱情的唯一成果。”<br />
-九、爱的实践：<br />
-1、纪律，贯穿一生的纪律。</p>
-<p>2、集中，缺乏集中的想像特别表现在我们现在已经很难一个人安静地坐着，什么也不干并保持清醒，觉察内心的活动。</p>
-<p>3，耐心。</p>
-<p>4，极大的兴趣。</p>
-<p>十、如何获得爱的能力：<br />
-1，克服自恋</p>
-<p>2，能实事求是地看待事物，对人和事物抱有开放的态度。能进行客观思考的能力就是理智，以理智为基础的感情是谦恭。这在爱的实践上表现在：能否学会爱取决于人的自恋程度和能不断培养自己的谦恭、客观性和理智。</p>
-<p>3，爱情以信仰为基础：</p>
-<p>（1）合理的信仰是扎根于自己的思想或感情体验的一种坚定的信念。</p>
-<p>（2）合理的信仰牢牢扎根于创造性的智力和情感的积极活动。</p>
-<p>（3）合理的信仰的基础是我们自己的生产力。</p>
-<p>（4）相信自己是我们做出许诺的先天条件，在爱情方面，就是要相信自己的爱情并相信这种爱情能唤起别人的爱以及相信这种爱的可靠性看作是爱情的基本条件。</p>
-<p>作者：墨禾子<br />
-链接：<a href="https://www.jianshu.com/p/5bbb0119e93a">https://www.jianshu.com/p/5bbb0119e93a</a><br />
-来源：简书<br />
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+    <title>树莓派内网穿透实现远程访问</title>
+    <url>/92270b23.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h3>
+<p>最近入手了一块raspberry 3b+，想要随时随地访问树莓派需要配置内网穿透。我最初找了一些这方便的文章，根据步骤配置，效果不怎么样。然后用了花生壳，体验也不好。后来发现一款强大的免费内网穿透软件，比起付费软件毫不逊色。</p>
+<h3 id="配置方案"><a class="markdownIt-Anchor" href="#配置方案"></a> 配置方案</h3>
+<h4 id="注册sakura-frp账号"><a class="markdownIt-Anchor" href="#注册sakura-frp账号"></a> 注册Sakura frp账号</h4>
+<p>百度<a href="https://www.natfrp.com/">Sakura</a>，第一个就是官网，长这样<br />
+<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/11/30/r4tijkQRsA2HC9z.png" alt="image.png" /><br />
+点击注册,按照提示填写资料。<br />
+<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/11/30/ZaTcFfkCz3neRdM.png" alt="image.png" /><br />
+注册完成后进入管理面板，记住访问密匙，后面会用到。<br />
+<img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/11/30/Mh5quw9TEni4OjR.png" alt="image.png" /></p>
+<h4 id="确认系统架构"><a class="markdownIt-Anchor" href="#确认系统架构"></a> 确认系统架构</h4>
+<p>树莓派官方系统的系统架构是arm，如果使用的其它系统，执行下面命令，根据输出结果确定系统架构</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ uname -a</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">架构</th>
+<th style="text-align:center">输出结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">i386</td>
+<td style="text-align:center">i386, i686</td>
+</tr>
+<tr>
+<td style="text-align:center">amd64</td>
+<td style="text-align:center">x86_64</td>
+</tr>
+<tr>
+<td style="text-align:center">arm</td>
+<td style="text-align:center">arm, armv7l</td>
+</tr>
+<tr>
+<td style="text-align:center">arm64</td>
+<td style="text-align:center">aarch64, armv8l</td>
+</tr>
+<tr>
+<td style="text-align:center">mips</td>
+<td style="text-align:center">mips</td>
+</tr>
+<tr>
+<td style="text-align:center">mips64</td>
+<td style="text-align:center">mips64</td>
+</tr>
+<tr>
+<td style="text-align:center">不支持</td>
+<td style="text-align:center">alpha, arc, blackfin, c6x, cris, frv, h8300, hexagon, ia64, m32r, m68k, metag, microblaze, mn10300, nios2, openrisc, parisc, parisc64, ppc, ppcle, ppc64, ppc64le, s390, s390x, score, sh, sh64, sparc, sparc64, tile, unicore32, xtensa</td>
+</tr>
+</tbody>
+</table>
+<p>如果您的输出结果不在上面列表中，可以通过[百度](<a href="https://www.baidu.com/%E8%BF%9B%E8%A1%8C%E6%90%9C%E7%B4%A2">https://www.baidu.com/进行搜索</a></p>
+<h4 id="安装frpc"><a class="markdownIt-Anchor" href="#安装frpc"></a> 安装frpc</h4>
+<p>登录<a href="https://www.natfrp.com/">管理面板</a>，在侧边栏点击 “软件下载” :<br />
+根据系统架构复制相应的下载地址<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-1.png" alt="image.png" /><br />
+使用下面的命令进入<code>/usr/local/bin</code>目录并下载文件</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> curl -Lo frpc 您刚才复制的下载地址</span></span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-2.png" alt="image.png" /></p>
+<p>然后使用下面的命令设置正确的权限并检查输出</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># chmod 755 frpc</span></span><br><span class="line"><span class="comment"># ls -ls frpc</span></span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-3.png" alt="image.png" /><br />
+如果您看到和图里一样的输出，frpc 就安装完成并可以正常使用了。您可以执行下面的命令来再次确认</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ frpc -v</span><br></pre></td></tr></table></figure>
+<h4 id="配置开机自启后台运行"><a class="markdownIt-Anchor" href="#配置开机自启后台运行"></a> 配置开机自启/后台运行</h4>
+<p>让<code>frpc</code>在开机时自启或在后台运行，可以让你在任何地方连接树莓派，这需要将<code>frpc</code>注册为系统服务</p>
+<p>首先，您要搞清楚您的<code>Linux</code>系统使用的 初始化系统 是什么，官方文档提供三种常见初始化系统的配置指南:</p>
+<ul>
+<li><a href="https://doc.natfrp.com/#/frpc/service/systemd">Systemd</a></li>
+<li><a href="https://doc.natfrp.com/#/frpc/service/upstart">Upstart</a></li>
+<li><a href="https://doc.natfrp.com/#/frpc/service/sysvinit">SysV-Init</a></li>
+</ul>
+<p>执行下面的命令然后查看输出，确定您的初始化系统</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if [[ `/sbin/init --version` =~ upstart ]]; then echo Upstart; elif [[ `systemctl` =~ -\.mount ]]; then echo Systemd; elif [[ -f /etc/init.d/cron &amp;&amp; ! -h /etc/init.d/cron ]]; then echo SysV-Init; else echo Unknown; fi</span></span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/usage/_images/linux-4.png" alt="image.png" /></p>
+<p>目前官方文档上只有<code>Systemd</code>的配置指南，另外两个还没写好，本人目前用的是树莓派官方系统，初始化系统是<code>Systemd</code>，下面是<code>Systemd</code>配置<code>frpc</code>开机自启/后台运行的方法</p>
+<h5 id="编写配置文件"><a class="markdownIt-Anchor" href="#编写配置文件"></a> 编写配置文件</h5>
+<p><code>Systemd</code>的<code>Unit</code>配置文件 通常位于这些目录中:</p>
+<ul>
+<li>/lib/systemd/system</li>
+<li>/etc/systemd/system<br />
+本文选用第一个目录来放置<code>frpc</code>的<code>Unit</code>配置文件，并且<code>frpc</code>启用后报错退出时每分钟会自动重启一次<br />
+执行下面命令</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vi /lib/systemd/system/frpc@.service</span></span><br></pre></td></tr></table></figure>
+<p>其中<code>vi</code>是一个文本编辑器，可以换成其它的<br />
+输入下述内容</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[Unit]</span></span><br><span class="line"><span class="attr">Description</span>=SakuraFrp Service</span><br><span class="line"><span class="attr">After</span>=network.target</span><br><span class="line"></span><br><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Type</span>=idle</span><br><span class="line"><span class="attr">User</span>=nobody</span><br><span class="line"><span class="attr">Restart</span>=<span class="literal">on</span>-failure</span><br><span class="line"><span class="attr">RestartSec</span>=<span class="number">60</span>s</span><br><span class="line"><span class="attr">ExecStart</span>=/usr/local/bin/frpc -f %i</span><br><span class="line"></span><br><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span>=multi-user.target</span><br></pre></td></tr></table></figure>
+<p>执行下面的命令重载<code>Systemd</code>，这样这样服务就配置完成了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl daemon-reload</span></span><br></pre></td></tr></table></figure>
+<h5 id="配置开机自启"><a class="markdownIt-Anchor" href="#配置开机自启"></a> 配置开机自启</h5>
+<p>使用下面的命令启用/禁用服务，<code>enable</code>是启用，<code>disable</code>是禁用，操作完成后再用<code>status</code>检查一下状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl &lt;enable|disable&gt; &lt;Unit名称&gt;</span></span><br><span class="line"><span class="comment"># systemctl status &lt;Unit名称&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果一切正常，您会看到我图中的两个红色标注的内容</p>
+<blockquote>
+<p>没看到第一个创建符号链接的提示也是正常的，只要下面的状态显示为<code>enabled</code>就行<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/frpc/service/_images/systemd-4.png" alt="image.png" /></p>
+</blockquote>
+<h4 id="启动器的基本设置"><a class="markdownIt-Anchor" href="#启动器的基本设置"></a> 启动器的基本设置</h4>
+<p>登录<a href="https://www.natfrp.com/">管理面板</a>，点击侧边栏的“软件下载”，下载推荐版本，如果打不开再换下面的传统启动器<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-0.png" alt="image.png" /><br />
+下载完毕后解压，点击<code>SakuraLauncher.exe</code>运行启动器（如果下载的是传统启动器运行<code>LegacyLauncher.exe</code>）进入用户信息界面，复制访问密钥（也叫token）到启动器点击登录<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-3.png" alt="image.png" /><br />
+创建隧道或在官网创建隧道，隧道创建成功后可通过启动器启动隧道<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-7.png" alt="image.png" /><br />
+启动成功后右下角会弹出通知，提示隧道连接方式。该通知可以在设置中通过 关闭隧道状态提示 选项禁用<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-8.png" alt="image.png" /><br />
+转到日志标签可以复制连接方式<br />
+<img src= "/img/loading.gif" data-lazy-src="https://doc.natfrp.com/launcher/_images/usage-9.png" alt="image" /></p>
+<h4 id="关于隧道"><a class="markdownIt-Anchor" href="#关于隧道"></a> 关于隧道</h4>
+<h5 id="启动停止隧道"><a class="markdownIt-Anchor" href="#启动停止隧道"></a> 启动/停止隧道</h5>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl &lt;start|stop&gt; &lt;Unit名称&gt;</span></span><br></pre></td></tr></table></figure>
+<p>使用上面命令启动/停止隧道，<code>start</code>是启动，<code>stop</code>是停止<br />
+其中&lt;Unit名称&gt;为&lt;你的Token&gt;:&lt;隧道ID&gt;[隧道ID[隧道ID…]]<br />
+如：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl start frpc@wdnmdtoken666666:12345</span></span><br></pre></td></tr></table></figure>
+<h5 id="查看隧道状态"><a class="markdownIt-Anchor" href="#查看隧道状态"></a> 查看隧道状态</h5>
+<p>可以通过下面命令查看特定隧道状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl status &lt;Unit名称&gt;</span></span><br></pre></td></tr></table></figure>
+<p>或者通过下面命令查看所有隧道状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># systemctl list-units frpc@*</span></span><br></pre></td></tr></table></figure>
+<h3 id="附录"><a class="markdownIt-Anchor" href="#附录"></a> 附录</h3>
+<p>参考：<a href="https://doc.natfrp.com/#/"><code>Sakura Frp</code>帮助文档</a></p>
 ]]></content>
+      <tags>
+        <tag>raspberry</tag>
+      </tags>
   </entry>
 </search>

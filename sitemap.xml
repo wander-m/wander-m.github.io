@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wander-m.github.io/fbf52663</loc>
+    <loc>https://wander-m.github.io/513e347f</loc>
     
-    <lastmod>2023-08-08</lastmod>
+    <lastmod>2023-09-14</lastmod>
     
   </url>
   
@@ -31,13 +31,6 @@
   
   <url>
     <loc>https://wander-m.github.io/8a707098</loc>
-    
-    <lastmod>2023-07-13</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wander-m.github.io/afe35157</loc>
     
     <lastmod>2023-07-13</lastmod>
     
@@ -123,7 +116,7 @@
 
   <url>
     <loc>https://wander-m.github.io/</loc>
-    <lastmod>2023-08-08</lastmod>
+    <lastmod>2023-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -131,35 +124,35 @@
   
   <url>
     <loc>https://wander-m.github.io/tags/raspberry/</loc>
-    <lastmod>2023-08-08</lastmod>
+    <lastmod>2023-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wander-m.github.io/tags/mysql/</loc>
-    <lastmod>2023-08-08</lastmod>
+    <lastmod>2023-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wander-m.github.io/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2023-08-08</lastmod>
+    <lastmod>2023-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wander-m.github.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/</loc>
-    <lastmod>2023-08-08</lastmod>
+    <lastmod>2023-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wander-m.github.io/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/</loc>
-    <lastmod>2023-08-08</lastmod>
+    <lastmod>2023-09-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
